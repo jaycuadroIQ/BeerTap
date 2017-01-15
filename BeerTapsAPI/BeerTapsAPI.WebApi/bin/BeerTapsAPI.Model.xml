@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BeerTapsAPI.Model</name>
+    </assembly>
+    <members>
+        <member name="T:BeerTapsAPI.Model.LinkRelations">
+            <summary>
+            iQmetrix link relation names
+            </summary>
+        </member>
+        <member name="F:BeerTapsAPI.Model.LinkRelations.Tap">
+            <summary>
+            link relation to describe the Identity resource.
+            </summary>
+        </member>
+        <member name="F:BeerTapsAPI.Model.LinkRelations.Office">
+            <summary>
+            office name
+            </summary>
+        </member>
+        <member name="T:BeerTapsAPI.Model.LinkRelations.Taps">
+            <summary>
+            For taps
+            </summary>
+        </member>
+        <member name="F:BeerTapsAPI.Model.LinkRelations.Taps.Full">
+            <summary>
+            add
+            </summary>
+        </member>
+        <member name="F:BeerTapsAPI.Model.LinkRelations.Taps.HalfEmpty">
+            <summary>
+            remove
+            </summary>
+        </member>
+        <member name="F:BeerTapsAPI.Model.LinkRelations.Taps.AlmostEmpty">
+            <summary>
+            For almost empty state
+            </summary>
+        </member>
+        <member name="F:BeerTapsAPI.Model.LinkRelations.Taps.Empty">
+            <summary>
+            For empty state
+            </summary>
+        </member>
+        <member name="F:BeerTapsAPI.Model.LinkRelations.Taps.Remove">
+            <summary>
+            remove
+            </summary>
+        </member>
+        <member name="F:BeerTapsAPI.Model.LinkRelations.Taps.Replace">
+            <summary>
+            replace keg
+            </summary>
+        </member>
+        <member name="T:BeerTapsAPI.Model.LinkRelations.UpdateKeg">
+            <summary>
+            Replacing Keg
+            </summary>
+        </member>
+        <member name="F:BeerTapsAPI.Model.LinkRelations.UpdateKeg.Replace">
+            <summary>
+            replace
+            </summary>
+        </member>
+        <member name="F:BeerTapsAPI.Model.LinkRelations.UpdateKeg.Add">
+            <summary>
+            Add
+            </summary>
+        </member>
+        <member name="F:BeerTapsAPI.Model.LinkRelations.UpdateKeg.Remove">
+            <summary>
+            Remove
+            </summary>
+        </member>
+        <member name="T:BeerTapsAPI.Model.AddKeg">
+            <summary>
+            Adding new Keg to tap
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.AddKeg.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.AddKeg.OfficeID">
+            <summary>
+            OfficeID
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.AddKeg.Remaining">
+            <summary>
+            Remaining
+            </summary>
+        </member>
+        <member name="T:BeerTapsAPI.Model.BeerTapResource">
+            <summary>
+            Represents IQ office
+            </summary>
+        </member>
+        <member name="T:BeerTapsAPI.Model.IUpdateKegResource">
+            <summary>
+             For updating Keg
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.IUpdateKegResource.Id">
+            <summary>
+            Tap ID
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.IUpdateKegResource.OfficeID">
+            <summary>
+            Office ID
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.IUpdateKegResource.Remaining">
+            <summary>
+            remaining
+            </summary>
+        </member>
+        <member name="T:BeerTapsAPI.Model.Office">
+            <summary>
+            Represents IQ office
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.Office.Id">
+            <summary>
+            Identifier
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.Office.Name">
+            <summary>
+            Name of the office
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.Office.Taps">
+            <summary>
+            Indicator of how much of tap is left
+            </summary>
+        </member>
+        <member name="T:BeerTapsAPI.Model.RemoveKeg">
+            <summary>
+            Replacing keg
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.RemoveKeg.Id">
+            <summary>
+            pending
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.RemoveKeg.OfficeID">
+            <summary>
+            Office ID
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.RemoveKeg.Remaining">
+            <summary>
+            remaining
+            </summary>
+        </member>
+        <member name="T:BeerTapsAPI.Model.ReplaceKeg">
+            <summary>
+            Replacing keg
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.ReplaceKeg.Id">
+            <summary>
+            pending
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.ReplaceKeg.OfficeID">
+            <summary>
+            Office ID
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.ReplaceKeg.Remaining">
+            <summary>
+            remaining
+            </summary>
+        </member>
+        <member name="T:BeerTapsAPI.Model.Tap">
+            <summary>
+            This represents beer tap
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.Tap.Id">
+            <summary>
+            Unique Identifier for the Tap
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.Tap.Name">
+            <summary>
+            Office name for this tap where it belongs
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.Tap.Remaining">
+            <summary>
+            How much is remaining in liters
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.Tap.TapState">
+            <summary>
+            How much beer is remaining on this tap on 
+            </summary>
+        </member>
+        <member name="P:BeerTapsAPI.Model.Tap.OfficeID">
+            <summary>
+            Id where this particular tap belongs
+            </summary>
+        </member>
+        <member name="T:BeerTapsAPI.Model.TapState">
+            <summary>
+            Keg State
+            </summary>
+        </member>
+        <member name="F:BeerTapsAPI.Model.TapState.Unknown">
+            <summary>
+            Null, empty or unknown
+            </summary>
+        </member>
+        <member name="F:BeerTapsAPI.Model.TapState.Full">
+            <summary>
+            Keg is full yay!
+            </summary>
+        </member>
+        <member name="F:BeerTapsAPI.Model.TapState.HalfEmpty">
+            <summary>
+            Half empty
+            </summary>
+        </member>
+        <member name="F:BeerTapsAPI.Model.TapState.AlmostEmpty">
+            <summary>
+            Almost gone gg
+            </summary>
+        </member>
+        <member name="F:BeerTapsAPI.Model.TapState.Empty">
+            <summary>
+            Uh-oh :(
+            </summary>
+        </member>
+    </members>
+</doc>

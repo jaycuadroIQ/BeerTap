@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>IQ.Platform.Framework.WebApi.CorsHelpers</name></assembly>
+<members>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:IQ.Platform.Framework.WebApi.CorsHelpers.AccessTokenInQueryStringHandler">
+<summary>
+ A handler reads &apos;token&apos; query string and adds the Authorization header based on its value.
+ It is used to support Internet Explorer 9 XDR object (used to perform CORS request).
+ For more information, see the wiki page: https://wiki.iqmetrix.com/display/Platform/Internet+Explorer+CORS+(Cross-origin+resource+sharing)+Support
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:IQ.Platform.Framework.WebApi.CorsHelpers.AsyncCallableHandler">
+<summary>
+ It wraps a DelegatingHandler to expose protected SendAsynch member
+ See why here: http://wizardsofsmart.net/post/how-to-use-base-sendasync-in-f-delegatinghandler/ 
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:IQ.Platform.Framework.WebApi.CorsHelpers.OverrideHttpMethodHandler">
+<summary>
+ A handler that updateds the request&apos;s HTTP verb from POST to method requested in &apos;method&apos; query parameter (POST, PUT or DELETE).
+ It is used to support Internet Explorer 9 XDR object (used to perform CORS request).
+ For more information, see the wiki page: https://wiki.iqmetrix.com/display/Platform/Internet+Explorer+CORS+(Cross-origin+resource+sharing)+Support
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:IQ.Platform.Framework.WebApi.CorsHelpers.SuppressResponseStatusCodeHandler">
+<summary>
+ A handler that wraps response&apos;s content in an JSON object that additionally contains HttpStatusCode
+ It is used to support Internet Explorer 9 XDR object (used to perform CORS request).
+ For more information, see the wiki page: https://wiki.iqmetrix.com/display/Platform/Internet+Explorer+CORS+(Cross-origin+resource+sharing)+Support
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:IQ.Platform.Framework.WebApi.CorsHelpers.Option">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:IQ.Platform.Framework.WebApi.CorsHelpers.XDRCorsHelper.SuppressedResponseStatusCodeModel">
+<summary>
+ This is a wrapper that contains response&apos;s status code and content type in addition the body.
+</summary>
+</member>
+<member name="M:IQ.Platform.Framework.WebApi.CorsHelpers.XDRCorsHelper.SuppressResponseStatusCodeAsyncTask(System.Collections.Generic.IEnumerable{System.Net.Http.Headers.MediaTypeHeaderValue},System.Net.Http.HttpResponseMessage)">
+<summary>
+ Wraps responses content in an JSON object that additionally contains HttpStatusCode
+</summary>
+</member>
+<member name="M:IQ.Platform.Framework.WebApi.CorsHelpers.XDRCorsHelper.SuppressResponseStatusCodeAsync(System.Collections.Generic.IEnumerable{System.Net.Http.Headers.MediaTypeHeaderValue},System.Net.Http.HttpResponseMessage)">
+<summary>
+ Wraps responses content in an JSON object that additionally contains HttpStatusCode
+</summary>
+</member>
+<member name="M:IQ.Platform.Framework.WebApi.CorsHelpers.XDRCorsHelper.OverrideHttpMethod(System.Net.Http.HttpRequestMessage)">
+<summary>
+ Updates the request&apos;s HTTP verb from POST to method requested in &apos;method&apos; query parameter.
+</summary>
+</member>
+<member name="M:IQ.Platform.Framework.WebApi.CorsHelpers.XDRCorsHelper.SetAuthorizationHeader(System.Net.Http.HttpRequestMessage)">
+<summary>
+ Reads &apos;token&apos; query string and adds the Authorization header based on its value. 
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:IQ.Platform.Framework.WebApi.CorsHelpers.XDRCorsHelper">
+<summary>
+ Set of functions that transform HTTP request/response to support Internet Explorer 9 XDR object used to perform CORS request.
+ For more information, see the wiki page: https://wiki.iqmetrix.com/display/Platform/Internet+Explorer+CORS+(Cross-origin+resource+sharing)+Support
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:System.AssemblyVersionInformation">
+
+</member>
+</members>
+</doc>

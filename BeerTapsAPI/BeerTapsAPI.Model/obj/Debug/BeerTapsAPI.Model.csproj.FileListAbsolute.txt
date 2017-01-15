@@ -1,0 +1,21 @@
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\bin\Debug\BeerTapsAPI.Model.XML
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\bin\Debug\BeerTapsAPI.Model.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\bin\Debug\BeerTapsAPI.Model.pdb
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\bin\Debug\IQ.Platform.Framework.Common.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\bin\Debug\IQ.Platform.Framework.WebApi.Model.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\bin\Debug\Newtonsoft.Json.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\bin\Debug\IQ.Platform.Framework.WebApi.Model.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\bin\Debug\Newtonsoft.Json.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\obj\Debug\BeerTapsAPI.Model.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\obj\Debug\BeerTapsAPI.Model.pdb
+C:\Users\jayson.cuadro\Documents\Visual Studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\obj\Debug\BeerTapsAPI.Model.csprojResolveAssemblyReference.cache
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\bin\Debug\BeerTapsAPI.Model.XML
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\bin\Debug\BeerTapsAPI.Model.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\bin\Debug\BeerTapsAPI.Model.pdb
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\bin\Debug\IQ.Platform.Framework.Common.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\bin\Debug\IQ.Platform.Framework.WebApi.Model.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\bin\Debug\Newtonsoft.Json.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\bin\Debug\IQ.Platform.Framework.WebApi.Model.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\bin\Debug\Newtonsoft.Json.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\obj\Debug\BeerTapsAPI.Model.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Model\obj\Debug\BeerTapsAPI.Model.pdb

@@ -1,0 +1,177 @@
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\BeerTapsAPI.Documentation.dll.config
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\BeerTapsAPI.Documentation.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\BeerTapsAPI.Documentation.pdb
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Castle.Core.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Castle.Windsor.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\IQ.Platform.Framework.Common.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\IQ.Platform.Framework.WebApi.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\IQ.Platform.Framework.WebApi.HelpGen.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\IQ.Platform.Framework.WebApi.Model.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\IQ.Platform.Hypermedia.Mapping.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\IQ.Platform.Hypermedia.Serialization.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Microsoft.Data.Edm.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Microsoft.Data.OData.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Microsoft.Web.Infrastructure.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Newtonsoft.Json.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Ploeh.AutoFixture.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Net.Http.Extensions.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Net.Http.Formatting.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Net.Http.Primitives.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Reactive.Core.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Reactive.Interfaces.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Reactive.Linq.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Reactive.PlatformServices.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Spatial.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Helpers.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Http.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Http.OData.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Http.WebHost.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Mvc.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Razor.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.WebPages.Deployment.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.WebPages.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.WebPages.Razor.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Castle.Core.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Castle.Windsor.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\IQ.Platform.Framework.WebApi.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\IQ.Platform.Framework.WebApi.Model.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Microsoft.Data.Edm.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Microsoft.Data.OData.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Newtonsoft.Json.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Ploeh.AutoFixture.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Net.Http.Extensions.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Net.Http.Formatting.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Net.Http.Primitives.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Reactive.Core.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Reactive.Interfaces.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Reactive.Linq.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Reactive.PlatformServices.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Spatial.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Helpers.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Http.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Http.OData.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Http.WebHost.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Mvc.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Razor.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.WebPages.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.WebPages.Deployment.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.WebPages.Razor.xml
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\de\Microsoft.Data.Edm.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\es\Microsoft.Data.Edm.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\it\Microsoft.Data.Edm.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\ja\Microsoft.Data.Edm.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\ko\Microsoft.Data.Edm.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\ru\Microsoft.Data.Edm.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\de\Microsoft.Data.OData.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\es\Microsoft.Data.OData.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\fr\Microsoft.Data.OData.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\it\Microsoft.Data.OData.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\ja\Microsoft.Data.OData.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\ko\Microsoft.Data.OData.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\ru\Microsoft.Data.OData.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\de\System.Spatial.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\es\System.Spatial.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\fr\System.Spatial.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\it\System.Spatial.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\ja\System.Spatial.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\ko\System.Spatial.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\ru\System.Spatial.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\zh-Hans\System.Spatial.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\zh-Hant\System.Spatial.resources.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\obj\Debug\BeerTapsAPI.Documentation.csproj.App.config
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\obj\Debug\BeerTapsAPI.Documentation.dll
+c:\users\jayson.cuadro\documents\visual studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\obj\Debug\BeerTapsAPI.Documentation.pdb
+C:\Users\jayson.cuadro\Documents\Visual Studio 2015\Projects\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\obj\Debug\BeerTapsAPI.Documentation.csprojResolveAssemblyReference.cache
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\BeerTapsAPI.Documentation.dll.config
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\BeerTapsAPI.Documentation.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\BeerTapsAPI.Documentation.pdb
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Castle.Core.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Castle.Windsor.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\IQ.Platform.Framework.Common.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\IQ.Platform.Framework.WebApi.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\IQ.Platform.Framework.WebApi.HelpGen.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\IQ.Platform.Framework.WebApi.Model.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\IQ.Platform.Hypermedia.Mapping.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\IQ.Platform.Hypermedia.Serialization.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Microsoft.Data.Edm.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Microsoft.Data.OData.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Newtonsoft.Json.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Ploeh.AutoFixture.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Net.Http.Extensions.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Net.Http.Formatting.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Net.Http.Primitives.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Reactive.Core.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Reactive.Interfaces.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Reactive.Linq.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Reactive.PlatformServices.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Spatial.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Helpers.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Http.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Http.OData.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Http.WebHost.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Mvc.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Razor.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.WebPages.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.WebPages.Razor.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Castle.Core.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Castle.Windsor.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\IQ.Platform.Framework.WebApi.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\IQ.Platform.Framework.WebApi.Model.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Microsoft.Data.Edm.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Microsoft.Data.OData.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Newtonsoft.Json.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\Ploeh.AutoFixture.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Net.Http.Extensions.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Net.Http.Formatting.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Net.Http.Primitives.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Reactive.Core.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Reactive.Interfaces.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Reactive.Linq.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Reactive.PlatformServices.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Spatial.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Helpers.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Http.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Http.OData.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Http.WebHost.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Mvc.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.Razor.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.WebPages.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\System.Web.WebPages.Razor.xml
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\de\Microsoft.Data.Edm.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\es\Microsoft.Data.Edm.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\it\Microsoft.Data.Edm.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\ja\Microsoft.Data.Edm.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\ko\Microsoft.Data.Edm.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\ru\Microsoft.Data.Edm.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\de\Microsoft.Data.OData.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\es\Microsoft.Data.OData.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\fr\Microsoft.Data.OData.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\it\Microsoft.Data.OData.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\ja\Microsoft.Data.OData.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\ko\Microsoft.Data.OData.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\ru\Microsoft.Data.OData.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\de\System.Spatial.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\es\System.Spatial.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\fr\System.Spatial.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\it\System.Spatial.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\ja\System.Spatial.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\ko\System.Spatial.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\ru\System.Spatial.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\zh-Hans\System.Spatial.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\bin\Debug\zh-Hant\System.Spatial.resources.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\obj\Debug\BeerTapsAPI.Documentation.csproj.App.config
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\obj\Debug\BeerTapsAPI.Documentation.dll
+C:\dev\BeerTapsAPI\BeerTapsAPI\BeerTapsAPI.Documentation\obj\Debug\BeerTapsAPI.Documentation.pdb

@@ -1,0 +1,10 @@
+C:\Users\jayson.cuadro\Documents\GitHub\BeerTap\BeerTapsAPI\BeerTapsAPI.Model\bin\Release\BeerTapsAPI.Model.dll
+C:\Users\jayson.cuadro\Documents\GitHub\BeerTap\BeerTapsAPI\BeerTapsAPI.Model\bin\Release\BeerTapsAPI.Model.pdb
+C:\Users\jayson.cuadro\Documents\GitHub\BeerTap\BeerTapsAPI\BeerTapsAPI.Model\bin\Release\IQ.Platform.Framework.Common.dll
+C:\Users\jayson.cuadro\Documents\GitHub\BeerTap\BeerTapsAPI\BeerTapsAPI.Model\bin\Release\IQ.Platform.Framework.WebApi.Model.dll
+C:\Users\jayson.cuadro\Documents\GitHub\BeerTap\BeerTapsAPI\BeerTapsAPI.Model\bin\Release\Newtonsoft.Json.dll
+C:\Users\jayson.cuadro\Documents\GitHub\BeerTap\BeerTapsAPI\BeerTapsAPI.Model\bin\Release\IQ.Platform.Framework.WebApi.Model.xml
+C:\Users\jayson.cuadro\Documents\GitHub\BeerTap\BeerTapsAPI\BeerTapsAPI.Model\bin\Release\Newtonsoft.Json.xml
+C:\Users\jayson.cuadro\Documents\GitHub\BeerTap\BeerTapsAPI\BeerTapsAPI.Model\obj\Release\BeerTapsAPI.Model.csprojResolveAssemblyReference.cache
+C:\Users\jayson.cuadro\Documents\GitHub\BeerTap\BeerTapsAPI\BeerTapsAPI.Model\obj\Release\BeerTapsAPI.Model.dll
+C:\Users\jayson.cuadro\Documents\GitHub\BeerTap\BeerTapsAPI\BeerTapsAPI.Model\obj\Release\BeerTapsAPI.Model.pdb
