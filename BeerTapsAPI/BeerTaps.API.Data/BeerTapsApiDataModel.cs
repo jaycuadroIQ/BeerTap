@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 
 namespace BeerTapsAPI.Data
@@ -13,6 +14,7 @@ namespace BeerTapsAPI.Data
         public BeerTapsApiDataModel()
             : base("name=BeerTapsApiDataModel")
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<BeerTapsApiDataModel, Migrations.Configuration>());
         }
 
 
