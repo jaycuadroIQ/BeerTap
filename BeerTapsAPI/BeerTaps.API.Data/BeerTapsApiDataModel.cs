@@ -23,16 +23,6 @@ namespace BeerTapsAPI.Data
 
         public DbSet<Office> OfficesData { get; set; }
         public DbSet<Tap> TapsData { get; set; }
-        
-        
-        public DbSet<Office> UpdatedTapOfficeRelation()
-        {
-            foreach (Office office in OfficesData )
-            {
-                //office.Taps
-            }
-
-            return OfficesData;
-        }
+       
     }
 }

@@ -38,18 +38,7 @@ namespace BeerTapsAPI.ApiServices
                 }
             );
         }
-
-        Task<AddKeg> IGetAResourceAsync<AddKeg, int>.GetAsync(int id, IRequestContext context, CancellationToken cancellation)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<ResourceCreationResult<AddKeg, int>> CreateAsync(AddKeg resource, IRequestContext context, CancellationToken cancellation)
-        {
-            throw new NotImplementedException();
-        }
-
-
+        
         private Tap CreateNewTap(int officeID, string tapName, int remaining)
         {
             Tap newTap = new Tap();

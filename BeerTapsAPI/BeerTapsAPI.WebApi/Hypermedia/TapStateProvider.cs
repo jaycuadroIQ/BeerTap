@@ -7,12 +7,6 @@ using IQ.Platform.Framework.WebApi.Model.Hypermedia;
 
 namespace BeerTapsAPI.WebApi.Hypermedia
 {
-    //public class TapStateProvider
-    //{
-    //}
-    //public abstract class TapStateProvider<TTapResource> : ResourceStateProviderBase<TTapResource, TapState>
-    //    where TTapResource : IStatefulResource<TapState>, IStatefulTap
-    //{
     public class TapStateProvider : ResourceStateProviderBase<Tap, TapState>
     { 
         public override TapState GetFor(Tap resource)

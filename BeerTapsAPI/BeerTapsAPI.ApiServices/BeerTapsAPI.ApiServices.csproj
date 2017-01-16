@@ -182,7 +182,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API Services\AddKegApiService.cs" />
-    <Compile Include="API Services\IBeerTapService.cs" />
     <Compile Include="API Services\IAddKegApiService.cs" />
     <Compile Include="API Services\IRemoveKegApiService.cs" />
     <Compile Include="API Services\RemoveKegApiService.cs" />

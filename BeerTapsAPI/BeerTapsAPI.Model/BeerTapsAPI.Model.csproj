@@ -59,10 +59,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IStatefulTap.cs" />
     <Compile Include="LinkRelations.cs" />
     <Compile Include="Resources\AddKegResource.cs" />
-    <Compile Include="Resources\BeerTapResource.cs" />
     <Compile Include="Resources\IUpdateKegResource.cs" />
     <Compile Include="Resources\OfficeResource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

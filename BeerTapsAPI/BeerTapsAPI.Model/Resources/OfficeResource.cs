@@ -8,7 +8,7 @@ namespace BeerTapsAPI.Model
     /// <summary>
     /// Represents IQ office
     /// </summary>
-    public class Office : BeerTapResource, IStatelessResource, IIdentifiable<int>
+    public class Office : IStatelessResource, IIdentifiable<int>
     {
         /// <summary>
         /// Identifier

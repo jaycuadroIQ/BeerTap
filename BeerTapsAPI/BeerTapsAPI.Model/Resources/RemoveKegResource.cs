@@ -5,12 +5,12 @@ using IQ.Platform.Framework.WebApi.Model.Hypermedia;
 namespace BeerTapsAPI.Model
 {
     /// <summary>
-    /// Replacing keg
+    /// Remove Keg
     /// </summary>
     public class RemoveKeg :  IUpdateKegResource
     {
         /// <summary>
-        /// pending
+        /// ID
         /// </summary>
         public int Id { get; set; }
         /// <summary>

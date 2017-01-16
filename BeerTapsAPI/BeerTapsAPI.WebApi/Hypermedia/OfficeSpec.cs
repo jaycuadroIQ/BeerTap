@@ -39,31 +39,5 @@ namespace BeerTapsAPI.WebApi.Hypermedia
             }
         }
 
-        // IResourceStateSpec is not required but can be overridden to define custom operations and links.
-        // See example below...
-        //
-        //public override IResourceStateSpec<SampleResource, NullState, int> StateSpec
-        //{
-        //    get
-        //    {
-        //        return
-        //            new SingleStateSpec<SampleResource, int>
-        //            {
-        //                Links =
-        //                {
-        //                    CreateLinkTemplate(LinkRelations.SampleResource2, OrganizationSpec2.Uri, r => r.Id),
-        //                },
-
-        //                Operations =
-        //                {
-        //                    Get = ServiceOperations.Get,
-        //                    InitialPost = ServiceOperations.Create,
-        //                    Post = ServiceOperations.Update,
-        //                    Delete = ServiceOperations.Delete,
-        //                },
-        //            };
-        //    }
-        //}
-
     }
 }

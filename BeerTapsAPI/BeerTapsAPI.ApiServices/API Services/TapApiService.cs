@@ -116,7 +116,7 @@ namespace BeerTapsAPI.ApiServices
                         throw new HttpRequestException("Invalid amount of beer to take.");
 
                     tap.Remaining = tap.Remaining - remaining;
-                    tap.TapState = GetTransitionState(remaining);
+                    tap.TapState = GetTransitionState(tap.Remaining);
 
                     context.SaveChanges();
                 }
