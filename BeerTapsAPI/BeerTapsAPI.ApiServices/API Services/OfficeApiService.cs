@@ -13,7 +13,7 @@ using Castle.Core.Internal;
 
 namespace BeerTapsAPI.ApiServices
 {
-    public class OfficeApiService : IOfficeApiService //, IBeerTapAPIService
+    public class OfficeApiService : IOfficeApiService 
     {
 
         readonly IApiUserProvider<BeerTapsAPIApiUser> _userProvider;
@@ -44,15 +44,13 @@ namespace BeerTapsAPI.ApiServices
 
             using (var context = new BeerTapsApiDataModel())
             {
-                office = context.OfficesData.Where(x => x.Id == id).SingleOrDefault();
+                office = context.OfficesData.SingleOrDefault(x => x.Id == id);
                 if (office != null)
                 {
                     List<Tap> taps = context.TapsData.Where(x => x.OfficeID == id).ToList();
                     office.Taps = taps;
                 }
-                
             }
-
             return office;
         }
 

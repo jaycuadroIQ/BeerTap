@@ -10,13 +10,9 @@ namespace BeerTapsAPI.Model
     public class ReplaceKeg :  IUpdateKegResource
     {
         /// <summary>
-        /// pending
-        /// </summary>
-        public int Id { get; set; }
-        /// <summary>
         /// Tap ID
         /// </summary>
-        //public int TapID { get; set; }
+        public int Id { get; set; }
         /// <summary>
         /// Office ID
         /// </summary>

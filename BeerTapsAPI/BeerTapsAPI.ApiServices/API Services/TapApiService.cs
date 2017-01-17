@@ -96,17 +96,17 @@ namespace BeerTapsAPI.ApiServices
         {
             using (var context = new BeerTapsApiDataModel())
             {
-                return context.TapsData.Where(x => x.Id == id && x.OfficeID == officeID).FirstOrDefault();
+                return context.TapsData.SingleOrDefault(x => x.Id == id && x.OfficeID == officeID);
             }
         }
 
         private Tap UpdateTap(int id, int officeID, int remaining)
         {
-            Tap tap = new Tap();
+            var tap = new Tap();
 
             using (var context = new BeerTapsApiDataModel())
             {
-                tap = context.TapsData.Where(x => x.Id == id && x.OfficeID == officeID).FirstOrDefault();
+                tap = context.TapsData.SingleOrDefault(x => x.Id == id && x.OfficeID == officeID);
 
                 if (tap != null)
                 {

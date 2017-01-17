@@ -27,12 +27,7 @@ namespace BeerTapsAPI.ApiServices
            
         }
 
-        public Task<ResourceCreationResult<ReplaceKeg, int>> CreateAsync(ReplaceKeg resource, IRequestContext context, CancellationToken cancellation)
-        {
-            ReplaceKeg test = new ReplaceKeg();
-            return Task.FromResult(new ResourceCreationResult<ReplaceKeg, int>(test));
-        }
-
+        
         public Task<RemoveKeg> UpdateAsync(RemoveKeg resource, IRequestContext context, CancellationToken cancellation)
         {
             var officeID =
@@ -63,7 +58,7 @@ namespace BeerTapsAPI.ApiServices
 
             using (var context = new BeerTapsApiDataModel())
             {
-                tap = context.TapsData.Where(x => x.Id == id && x.OfficeID == officeID).FirstOrDefault();
+                tap = context.TapsData.SingleOrDefault(x => x.Id == id && x.OfficeID == officeID);
 
                 if (tap != null)
                 {

@@ -34,7 +34,8 @@ namespace BeerTapsAPI.ApiServices
             var tapID =
                 context.UriParameters.GetByName<int>("ID").EnsureValue(
                     () => context.CreateHttpResponseException<Tap>("Please supply tap ID in the URI.", System.Net.HttpStatusCode.BadRequest));
-
+            
+            
             var tap = UpdateTap(tapID, officeID, resource.Remaining, resource.Name);
 
             return Task.FromResult
@@ -57,7 +58,7 @@ namespace BeerTapsAPI.ApiServices
 
             using (var context = new BeerTapsApiDataModel())
             {
-                tap = context.TapsData.Where(x => x.Id == id && x.OfficeID == officeID).FirstOrDefault();
+                tap = context.TapsData.SingleOrDefault(x => x.Id == id && x.OfficeID == officeID);
 
                 if (tap != null)
                 {
@@ -80,18 +81,7 @@ namespace BeerTapsAPI.ApiServices
           return tap;
         }
 
-
-        public Task<ReplaceKeg> GetAsync(int id, IRequestContext context, CancellationToken cancellation)
-        {
-            var officeID =
-                context.UriParameters.GetByName<int>("OfficeID").EnsureValue(
-                    () => context.CreateHttpResponseException<Tap>("Please supply office ID in the URI.", System.Net.HttpStatusCode.BadRequest));
-
-
-            return Task.FromResult(new ReplaceKeg() { Id = 1, OfficeID = 1, Remaining = 5 });
-        }
-
-
+        
         
     }
 }
