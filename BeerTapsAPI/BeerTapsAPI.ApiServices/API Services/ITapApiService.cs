@@ -6,7 +6,8 @@ namespace BeerTapsAPI.ApiServices
     public interface ITapApiService :
         IGetAResourceAsync<Tap, int>,
         IGetManyOfAResourceAsync<Tap, int>,
-        IUpdateAResourceAsync<Tap, int>
+        IUpdateAResourceAsync<Tap, int>,
+        ICreateAResourceAsync<Tap,int>
     {
     }
 }

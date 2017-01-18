@@ -22,6 +22,25 @@ namespace BeerTapsAPI.WebApi.Hypermedia
 
         protected override IEnumerable<IResourceStateSpec<Tap, TapState, int>> GetStateSpecs()
         {
+            yield return new ResourceStateSpec<Tap, TapState, int>(TapState.Unknown)
+            {
+                Links =
+                {
+
+                    CreateLinkTemplate(LinkRelations.Taps.Full, UriTapsAtOffice, c => c.OfficeID, c => c.Id)
+
+                },
+                Operations = new StateSpecOperationsSource<Tap, int>()
+                {
+                    Get = ServiceOperations.Get,
+                    InitialPost = ServiceOperations.Create,
+                    Post = ServiceOperations.Update,
+                    Put = ServiceOperations.Update
+
+
+                }
+            };
+
             yield return new ResourceStateSpec<Tap, TapState, int>(TapState.Full)
             {
                 Links =

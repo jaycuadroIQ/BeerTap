@@ -47,6 +47,16 @@ namespace BeerTapsAPI.WebApi.Hypermedia
                         TapState.Unknown,
                     }
                 },
+                {
+                    TapState.Empty, new[]
+                    {
+                        TapState.Full,
+                        TapState.HalfEmpty,
+                        TapState.AlmostEmpty,
+                        TapState.HalfEmpty
+
+                    }
+                }
             };
 
         }
