@@ -181,17 +181,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API Services\AddKegApiService.cs" />
-    <Compile Include="API Services\IAddKegApiService.cs" />
-    <Compile Include="API Services\IRemoveKegApiService.cs" />
-    <Compile Include="API Services\RemoveKegApiService.cs" />
+    <Compile Include="API Services\AddTapApiService.cs" />
+    <Compile Include="API Services\IAddTapApiService.cs" />
+    <Compile Include="API Services\IRemoveTapApiService.cs" />
+    <Compile Include="API Services\RemoveTapApiService.cs" />
     <Compile Include="IDomainServiceResolver.cs" />
     <Compile Include="API Services\IOfficeApiService.cs" />
-    <Compile Include="API Services\IReplaceKegApiService.cs" />
+    <Compile Include="API Services\IReplaceTapApiService.cs" />
     <Compile Include="API Services\ITapApiService.cs" />
     <Compile Include="LinksParametersSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="API Services\ReplaceKegApiService.cs" />
+    <Compile Include="API Services\ReplaceTapApiService.cs" />
     <Compile Include="Security\ApiClient.cs" />
     <Compile Include="Security\AuthenticationFailedException.cs" />
     <Compile Include="Security\BeerTapsAPIApiUser.cs" />

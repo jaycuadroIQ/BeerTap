@@ -3,8 +3,8 @@ using IQ.Platform.Framework.WebApi;
 
 namespace BeerTapsAPI.ApiServices
 {
-    public interface IRemvoveKegApiService :
-        IUpdateAResourceAsync<RemoveKeg, int>
+    public interface IAddTapApiService :
+        IUpdateAResourceAsync<AddTap, int>
     {
     }
 }

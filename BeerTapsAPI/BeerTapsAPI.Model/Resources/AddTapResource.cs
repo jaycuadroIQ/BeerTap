@@ -1,28 +1,30 @@
 ﻿using System;
-using IQ.Platform.Framework.Common;
-using IQ.Platform.Framework.WebApi.Model.Hypermedia;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace BeerTapsAPI.Model
 {
     /// <summary>
-    /// Replacing keg
+    /// Adding new Keg to tap
     /// </summary>
-    public class ReplaceKeg :  IUpdateKegResource
+    public class AddTap : IUpdateTapResource
     {
         /// <summary>
-        /// Tap ID
+        /// ID
         /// </summary>
         public int Id { get; set; }
         /// <summary>
-        /// Office ID
+        /// OfficeID
         /// </summary>
         public int OfficeID { get; set; }
         /// <summary>
-        /// remaining
+        /// Remaining
         /// </summary>
         public int Remaining { get; set; }
         /// <summary>
-        /// Name for this keg
+        /// Name of the keg/tap to be added
         /// </summary>
         public string Name { get; set; }
         

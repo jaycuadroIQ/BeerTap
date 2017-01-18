@@ -6,27 +6,27 @@ using System.Collections.Generic;
 
 namespace BeerTapsAPI.WebApi.Hypermedia
 {
-    public class ReplaceKegSpec : SingleStateResourceSpec<ReplaceKeg, int>
+    public class ReplaceTapSpec : SingleStateResourceSpec<ReplaceTap, int>
     {
         public static ResourceUriTemplate UriReplace = ResourceUriTemplate.Create("Offices({OfficeID})/Taps({id})/Replace");
 
-        protected override IEnumerable<ResourceLinkTemplate<ReplaceKeg>> Links()
+        protected override IEnumerable<ResourceLinkTemplate<ReplaceTap>> Links()
         {
             yield return CreateLinkTemplate(CommonLinkRelations.Self, UriReplace, c => c.OfficeID, c => c.Id);
         }
 
-        public override IResourceStateSpec<ReplaceKeg, NullState, int> StateSpec
+        public override IResourceStateSpec<ReplaceTap, NullState, int> StateSpec
         {
             get
             {
                 return
-                    new SingleStateSpec<ReplaceKeg, int>
+                    new SingleStateSpec<ReplaceTap, int>
                     {
                         Links =
                         {
                             CreateLinkTemplate(LinkRelations.Tap, TapSpec.UriTapsAtOffice, r => r.OfficeID, r => r.Id)
                         },
-                        Operations = new StateSpecOperationsSource<ReplaceKeg, int>()
+                        Operations = new StateSpecOperationsSource<ReplaceTap, int>()
                         {
                             InitialPost = ServiceOperations.Create,
                             Post = ServiceOperations.Update

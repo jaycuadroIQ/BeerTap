@@ -1,35 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Threading;
-
-using IQ.Platform.Framework.WebApi.Services.Security;
 using IQ.Platform.Framework.Common;
 using IQ.Platform.Framework.WebApi;
-
-using BeerTapsAPI.ApiServices.Security;
 using BeerTapsAPI.Model;
 using BeerTapsAPI.Data;
 
 
 namespace BeerTapsAPI.ApiServices
 {
-    public class AddKegApiService : IAddKegApiService
+    public class AddTapApiService : IAddTapApiService
     {
  
 
-        public Task<AddKeg> UpdateAsync(AddKeg resource, IRequestContext context, CancellationToken cancellation)
+        public Task<AddTap> UpdateAsync(AddTap resource, IRequestContext context, CancellationToken cancellation)
         {
-            var officeID =
+            var officeId =
                 context.UriParameters.GetByName<int>("id").EnsureValue(
                     () => context.CreateHttpResponseException<Tap>("Please supply office ID in the URI.", System.Net.HttpStatusCode.BadRequest));
 
-            var tap = CreateNewTap(officeID,resource.Name,resource.Remaining);
+            var tap = CreateNewTap(officeId,resource.Name,resource.Remaining);
 
             return Task.FromResult
             (
-                new AddKeg()
+                new AddTap()
                 {
                     Id = tap.Id,
                     OfficeID = tap.OfficeID,
@@ -39,9 +32,9 @@ namespace BeerTapsAPI.ApiServices
             );
         }
         
-        private Tap CreateNewTap(int officeID, string tapName, int remaining)
+        private Tap CreateNewTap(int officeId, string tapName, int remaining)
         {
-            Tap newTap = new Tap();
+            Tap newTap;
 
             using (var context = new BeerTapsApiDataModel())
             {
@@ -49,7 +42,7 @@ namespace BeerTapsAPI.ApiServices
                 newTap = new Tap()
                 {
                     Name = tapName,
-                    OfficeID = officeID,
+                    OfficeID = officeId,
                     Remaining = newRemaining,
                     TapState = TapApiService.GetTransitionState(newRemaining)
                 };

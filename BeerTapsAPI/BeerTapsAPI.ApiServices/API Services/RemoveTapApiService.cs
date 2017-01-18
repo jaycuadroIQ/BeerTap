@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using System.Threading;
 
@@ -14,10 +15,10 @@ using BeerTapsAPI.Data;
 
 namespace BeerTapsAPI.ApiServices
 {
-    public class RemoveKegApiService : IRemvoveKegApiService
+    public class RemoveTapApiService : IRemvoveTapApiService
     {
         readonly IApiUserProvider<BeerTapsAPIApiUser> _userProvider;
-        public RemoveKegApiService(IApiUserProvider<BeerTapsAPIApiUser> userProvider)
+        public RemoveTapApiService(IApiUserProvider<BeerTapsAPIApiUser> userProvider)
         {
             
             if (userProvider == null)
@@ -28,7 +29,7 @@ namespace BeerTapsAPI.ApiServices
         }
 
         
-        public Task<RemoveKeg> UpdateAsync(RemoveKeg resource, IRequestContext context, CancellationToken cancellation)
+        public Task<RemoveTap> UpdateAsync(RemoveTap resource, IRequestContext context, CancellationToken cancellation)
         {
             var officeID =
                 context.UriParameters.GetByName<int>("OfficeID").EnsureValue(
@@ -37,42 +38,43 @@ namespace BeerTapsAPI.ApiServices
                 context.UriParameters.GetByName<int>("ID").EnsureValue(
                     () => context.CreateHttpResponseException<Tap>("Please supply tap ID in the URI.", System.Net.HttpStatusCode.BadRequest));
 
-            var tap = RemoveTap(tapID, officeID);
+            var tap = GetTapById(tapID, officeID);
+            if (!tap.HasValue)
+                throw context.CreateHttpResponseException<RemoveTap>("Beer not found.", HttpStatusCode.NotFound);
 
-            return Task.FromResult
-                (
-                    new RemoveKeg()
-                    {
-                        Id = tap.Id,
-                        OfficeID = tap.OfficeID,
-                        Remaining = tap.Remaining,
-                    }
-                );
+            return Task.FromResult(RemoveTap(tapID, officeID));
         }
 
       
       
-        private Tap RemoveTap(int id, int officeID)
+        private RemoveTap RemoveTap(int id, int officeID)
         {
-            Tap tap = new Tap();
-
+            RemoveTap tapToRemove = new RemoveTap();
             using (var context = new BeerTapsApiDataModel())
             {
-                tap = context.TapsData.SingleOrDefault(x => x.Id == id && x.OfficeID == officeID);
+                var tap = context.TapsData.SingleOrDefault(x => x.Id == id && x.OfficeID == officeID);
 
                 if (tap != null)
                 {
 
                     context.TapsData.Remove(tap);
                     context.SaveChanges();
+
+                    tapToRemove.Id = tap.Id;
+                    tapToRemove.OfficeID = tap.OfficeID;
+                    tapToRemove.Remaining = tap.Remaining;
                 }
-                else
-                {
-                    throw new Exception("Can't find the specific tap to replace.");
-                }
+                
             }
 
-            return tap;
+            return tapToRemove;
+        }
+        private Option<Tap> GetTapById(int id, int officeId)
+        {
+            using (var context = new BeerTapsApiDataModel())
+            {
+                return context.TapsData.SingleOrDefaultAsOption(x => x.Id == id && x.OfficeID == officeId);
+            }
         }
 
     }
