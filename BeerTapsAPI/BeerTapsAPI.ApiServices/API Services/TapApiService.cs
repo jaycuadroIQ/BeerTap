@@ -142,7 +142,7 @@ namespace BeerTapsAPI.ApiServices
             }
         }
 
-        private Option<Tap> GetTapById(int id, int officeId)
+        public static Option<Tap> GetTapById(int id, int officeId)
         {
             using (var context = new BeerTapsApiDataModel())
             {

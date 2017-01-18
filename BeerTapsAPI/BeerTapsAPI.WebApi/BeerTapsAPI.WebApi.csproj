@@ -289,10 +289,10 @@
     </Compile>
     <Compile Include="Handlers\NullUserContext.cs" />
     <Compile Include="Handlers\PutYourApiSafeNameUserContextProvidingHandler.cs" />
-    <Compile Include="Hypermedia\RemoveKegSpec.cs" />
+    <Compile Include="Hypermedia\RemoveTapSpec.cs" />
     <Compile Include="Hypermedia\OfficeSpec.cs" />
-    <Compile Include="Hypermedia\AddKegSpec.cs" />
-    <Compile Include="Hypermedia\ReplaceKegSpec.cs" />
+    <Compile Include="Hypermedia\AddTapSpec.cs" />
+    <Compile Include="Hypermedia\ReplaceTapSpec.cs" />
     <Compile Include="Hypermedia\TapSpec.cs" />
     <Compile Include="Hypermedia\TapStateProvider.cs" />
     <Compile Include="Infrastructure\BootStrapper.cs" />

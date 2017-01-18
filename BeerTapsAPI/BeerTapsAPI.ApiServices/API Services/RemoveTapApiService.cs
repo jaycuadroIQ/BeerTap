@@ -38,7 +38,7 @@ namespace BeerTapsAPI.ApiServices
                 context.UriParameters.GetByName<int>("ID").EnsureValue(
                     () => context.CreateHttpResponseException<Tap>("Please supply tap ID in the URI.", System.Net.HttpStatusCode.BadRequest));
 
-            var tap = GetTapById(tapID, officeID);
+            var tap = TapApiService.GetTapById(tapID, officeID);
             if (!tap.HasValue)
                 throw context.CreateHttpResponseException<RemoveTap>("Beer not found.", HttpStatusCode.NotFound);
 
@@ -69,13 +69,7 @@ namespace BeerTapsAPI.ApiServices
 
             return tapToRemove;
         }
-        private Option<Tap> GetTapById(int id, int officeId)
-        {
-            using (var context = new BeerTapsApiDataModel())
-            {
-                return context.TapsData.SingleOrDefaultAsOption(x => x.Id == id && x.OfficeID == officeId);
-            }
-        }
+        
 
     }
 }

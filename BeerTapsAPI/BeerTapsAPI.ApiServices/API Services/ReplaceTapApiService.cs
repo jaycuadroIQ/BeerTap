@@ -41,7 +41,7 @@ namespace BeerTapsAPI.ApiServices
                         HttpStatusCode.BadRequest);
             }
 
-            var tap = GetTapById(tapID, officeID);
+            var tap = TapApiService.GetTapById(tapID, officeID);
 
             if (tap.HasValue)
             {
@@ -93,13 +93,7 @@ namespace BeerTapsAPI.ApiServices
             return replacementTap;
         }
 
-        private Option<Tap> GetTapById(int id, int officeId)
-        {
-            using (var context = new BeerTapsApiDataModel())
-            {
-                return context.TapsData.SingleOrDefaultAsOption(x => x.Id == id && x.OfficeID == officeId);
-            }
-        }
+        
 
     }
 }
