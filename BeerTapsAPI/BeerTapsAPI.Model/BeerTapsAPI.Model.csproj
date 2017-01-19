@@ -60,7 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LinkRelations.cs" />
-    <Compile Include="Resources\TakeBeerResource.cs" />
     <Compile Include="Resources\IUpdateTapResource.cs" />
     <Compile Include="Resources\OfficeResource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

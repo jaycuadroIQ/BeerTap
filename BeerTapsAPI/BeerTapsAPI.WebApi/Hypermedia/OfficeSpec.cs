@@ -21,8 +21,8 @@ namespace BeerTapsAPI.WebApi.Hypermedia
                     {
                         Links =
                         {
-                            CreateLinkTemplate(LinkRelations.Tap, TapSpec.UriTapsAtOffice.Many, r => r.Id),
-                            CreateLinkTemplate(LinkRelations.UpdateKeg.Add, TapSpec.UriTapsAtOffice.Many, r => r.Id)
+                            CreateLinkTemplate(LinkRelations.Tap, TapSpec.UriTapsAtOffice.Many, r => r.Id)
+                            
 
                         },
                         Operations = new StateSpecOperationsSource<Office, int>

@@ -56,12 +56,12 @@ namespace BeerTapsAPI.ApiServices
 
 
 
-            return Task.FromResult(UpdateTap(tapID, officeID, resource.Name));
+            return Task.FromResult(UpdateTap(tapID, officeID, resource.Name, resource.Remaining));
                 
         }
 
 
-        private ReplaceTap UpdateTap(int id, int officeID, string newName)
+        private ReplaceTap UpdateTap(int id, int officeID, string newName, int replacementAmount)
         {
             ReplaceTap replacementTap = new ReplaceTap();
             const int defaultTapContent = 5;
@@ -72,7 +72,7 @@ namespace BeerTapsAPI.ApiServices
 
                 if (tap != null)
                 {
-                    tap.Remaining = defaultTapContent;
+                    tap.Remaining = replacementAmount;
                     tap.TapState = TapState.Full;
                     if (!string.IsNullOrEmpty(newName))
                     {

@@ -181,8 +181,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API Services\ITakeBeerApiService.cs" />
-    <Compile Include="API Services\TakeBeerApiService.cs" />
     <Compile Include="IDomainServiceResolver.cs" />
     <Compile Include="API Services\IOfficeApiService.cs" />
     <Compile Include="API Services\IReplaceTapApiService.cs" />

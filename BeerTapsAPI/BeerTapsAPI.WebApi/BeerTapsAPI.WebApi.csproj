@@ -289,7 +289,6 @@
     </Compile>
     <Compile Include="Handlers\NullUserContext.cs" />
     <Compile Include="Handlers\PutYourApiSafeNameUserContextProvidingHandler.cs" />
-    <Compile Include="Hypermedia\TakeBeerSpec.cs" />
     <Compile Include="Hypermedia\OfficeSpec.cs" />
     <Compile Include="Hypermedia\ReplaceTapSpec.cs" />
     <Compile Include="Hypermedia\TapSpec.cs" />
