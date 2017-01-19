@@ -29,31 +29,29 @@ namespace BeerTapsAPI.WebApi.Hypermedia
                 {
                     TapState.Full, new[]
                     {
-                        TapState.HalfEmpty,
-                        TapState.Unknown,
+                        TapState.HalfEmpty
+                        //TapState.Unknown,
                     }
                 },
                 {
                     TapState.HalfEmpty, new[]
                     {
-                        TapState.AlmostEmpty,
-                        TapState.Unknown,
+                        TapState.AlmostEmpty
+                        //TapState.Unknown,
                     }
                 },
                 {
                     TapState.AlmostEmpty, new[]
                     {
-                        TapState.Empty,
-                        TapState.Unknown,
+                        TapState.Empty
+                        //TapState.Unknown,
                     }
                 },
                 {
                     TapState.Empty, new[]
                     {
-                        TapState.Full,
-                        TapState.HalfEmpty,
-                        TapState.AlmostEmpty,
-                        TapState.HalfEmpty
+                        TapState.Full
+                        
 
                     }
                 }

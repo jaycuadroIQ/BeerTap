@@ -56,23 +56,24 @@ namespace BeerTapsAPI.ApiServices
 
 
 
-            return Task.FromResult(UpdateTap(tapID, officeID, resource.Remaining, resource.Name));
+            return Task.FromResult(UpdateTap(tapID, officeID, resource.Name));
                 
         }
 
 
-        private ReplaceTap UpdateTap(int id, int officeID, int remaining, string newName)
+        private ReplaceTap UpdateTap(int id, int officeID, string newName)
         {
             ReplaceTap replacementTap = new ReplaceTap();
-    
+            const int defaultTapContent = 5;
+
             using (var context = new BeerTapsApiDataModel())
             {
                 var tap = context.TapsData.SingleOrDefault(x => x.Id == id && x.OfficeID == officeID);
 
                 if (tap != null)
                 {
-                    tap.Remaining = remaining;
-                    tap.TapState = TapApiService.GetTransitionState(remaining);
+                    tap.Remaining = defaultTapContent;
+                    tap.TapState = TapState.Full;
                     if (!string.IsNullOrEmpty(newName))
                     {
                         tap.Name = newName;
@@ -85,10 +86,7 @@ namespace BeerTapsAPI.ApiServices
                     replacementTap.OfficeID = tap.OfficeID;
                     replacementTap.Remaining = tap.Remaining;
                 }
-                else
-                {
-                    throw new Exception("Can't find the specific tap to replace.");
-                }
+
             }
             return replacementTap;
         }

@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
 using System.Threading;
 
@@ -12,24 +10,23 @@ using IQ.Platform.Framework.WebApi;
 using BeerTapsAPI.ApiServices.Security;
 using BeerTapsAPI.Model;
 using BeerTapsAPI.Data;
+using System.Net;
 
 namespace BeerTapsAPI.ApiServices
 {
-    public class RemoveTapApiService : IRemvoveTapApiService
+    public class TakeGlassApiService : ITakeBeerApiService
     {
         readonly IApiUserProvider<BeerTapsAPIApiUser> _userProvider;
-        public RemoveTapApiService(IApiUserProvider<BeerTapsAPIApiUser> userProvider)
+        public TakeGlassApiService(IApiUserProvider<BeerTapsAPIApiUser> userProvider)
         {
-            
+
             if (userProvider == null)
                 throw new ArgumentNullException("userProvider");
             _userProvider = userProvider;
-
-           
         }
 
-        
-        public Task<RemoveTap> UpdateAsync(RemoveTap resource, IRequestContext context, CancellationToken cancellation)
+
+        public Task<TakeBeer> UpdateAsync(TakeBeer resource, IRequestContext context, CancellationToken cancellation)
         {
             var officeID =
                 context.UriParameters.GetByName<int>("OfficeID").EnsureValue(
@@ -38,37 +35,51 @@ namespace BeerTapsAPI.ApiServices
                 context.UriParameters.GetByName<int>("ID").EnsureValue(
                     () => context.CreateHttpResponseException<Tap>("Please supply tap ID in the URI.", System.Net.HttpStatusCode.BadRequest));
 
+            
             var tap = TapApiService.GetTapById(tapID, officeID);
-            if (!tap.HasValue)
-                throw context.CreateHttpResponseException<RemoveTap>("Beer not found.", HttpStatusCode.NotFound);
 
-            return Task.FromResult(RemoveTap(tapID, officeID));
+            if (tap.HasValue)
+            {
+                if (tap.Value.Remaining == 0)
+                {
+                    throw context.CreateHttpResponseException<Tap>("There is not enough beer remaining in the keg.",
+                        HttpStatusCode.BadRequest);
+                }
+            }
+            else
+                context.CreateHttpResponseException<Tap>("Beer not found.", HttpStatusCode.NotFound);
+
+
+            return Task.FromResult(UpdateTap(tap.Value.Id, tap.Value.OfficeID));
+
         }
 
-      
-      
-        private RemoveTap RemoveTap(int id, int officeID)
+
+        private TakeBeer UpdateTap(int id, int officeID)
         {
-            RemoveTap tapToRemove = new RemoveTap();
+            TakeBeer updatedTap = new TakeBeer();
+            
             using (var context = new BeerTapsApiDataModel())
             {
                 var tap = context.TapsData.SingleOrDefault(x => x.Id == id && x.OfficeID == officeID);
 
                 if (tap != null)
                 {
-
-                    context.TapsData.Remove(tap);
+                    tap.Remaining = tap.Remaining -= 1;
+                    tap.TapState = TapApiService.GetTransitionState(tap.Remaining);
+                    
                     context.SaveChanges();
 
-                    tapToRemove.Id = tap.Id;
-                    tapToRemove.OfficeID = tap.OfficeID;
-                    tapToRemove.Remaining = tap.Remaining;
+                    updatedTap.Id = tap.Id;
+                    updatedTap.Remaining = tap.Remaining;
+                    updatedTap.OfficeID = tap.OfficeID;
+                    updatedTap.Name = tap.Name;
                 }
                 
             }
-
-            return tapToRemove;
+            return updatedTap;
         }
+
         
 
     }

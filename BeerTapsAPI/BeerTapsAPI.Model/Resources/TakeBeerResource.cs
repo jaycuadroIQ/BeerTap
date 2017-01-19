@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace BeerTapsAPI.Model
 {
     /// <summary>
-    /// Adding new Keg to tap
+    /// Taking beer from tap
     /// </summary>
-    public class AddTap : IUpdateTapResource
+    public class TakeBeer : IUpdateTapResource
     {
         /// <summary>
         /// ID

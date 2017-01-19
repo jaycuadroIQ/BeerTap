@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -32,15 +33,19 @@ namespace BeerTapsAPI.ApiServices
 
         
 
-        public Task<Tap> GetAsync(int id, IRequestContext context, CancellationToken cancellation)
+        public async Task<Tap> GetAsync(int id, IRequestContext context, CancellationToken cancellation)
         {
             var officeID =
                 context.UriParameters.GetByName<int>("OfficeID").EnsureValue(
                     () => context.CreateHttpResponseException<Tap>("Please supply office ID in the URI.", System.Net.HttpStatusCode.BadRequest));
-
-
-            //return Task.FromResult(GetTapById(id, officeID));
-            return Task.FromResult(GetTapById(id, officeID).EnsureValue(() => context.CreateHttpResponseException<Tap>("Beer not found", HttpStatusCode.NotFound)));
+            using (var ctx = new BeerTapsApiDataModel())
+            {
+                var tap =
+                    await ctx.TapsData.SingleOrDefaultAsync(x => x.Id == id && x.OfficeID == officeID, cancellation);
+                if (tap == null)
+                    context.CreateNotFoundHttpResponseException<Tap>("Beer not found!");
+                return tap;
+            }
         }
 
         public Task<IEnumerable<Tap>> GetManyAsync(IRequestContext context, CancellationToken cancellation)
@@ -48,16 +53,19 @@ namespace BeerTapsAPI.ApiServices
             var officeID = 
                 context.UriParameters.GetByName<int>("OfficeID").EnsureValue(
                     () => context.CreateHttpResponseException<Tap>("Please supply office ID in the URI.", System.Net.HttpStatusCode.BadRequest));
-
-
             return Task.FromResult(GetAll(officeID));
 
 
         }
 
-        public Task<ResourceCreationResult<Tap, int>> CreateAsync(Tap resource, IRequestContext context, CancellationToken cancellation)
+        public async Task<ResourceCreationResult<Tap, int>> CreateAsync(Tap resource, IRequestContext context, CancellationToken cancellation)
         {
-            throw new NotImplementedException();
+            var officeId =
+                context.UriParameters.GetByName<int>("OfficeID").EnsureValue(
+                    () => context.CreateHttpResponseException<Tap>("Please supply office ID in the URI.", System.Net.HttpStatusCode.BadRequest));
+            var tap = await CreateTap(officeId, resource.Name, resource.Remaining);
+            return new ResourceCreationResult<Tap, int>(tap);
+
         }
 
         public Task<Tap> UpdateAsync(Tap resource, IRequestContext context, CancellationToken cancellation)
@@ -92,8 +100,29 @@ namespace BeerTapsAPI.ApiServices
 
             return Task.FromResult(UpdateTap(tap.Value.Id, tap.Value.OfficeID, resource.Remaining));
         }
+        private static async Task<Tap> CreateTap(int officeId, string tapName, int remaining)
+        {
+            Tap newTap;
+            const string defaultTapName = "San Miguel Beer";
+            using (var context = new BeerTapsApiDataModel())
+            {
+                int newRemaining = remaining > 0 ? remaining : 5;
+                newTap = new Tap()
+                {
+                    Name = string.IsNullOrEmpty(tapName) ? defaultTapName : tapName,
+                    OfficeID = officeId,
+                    Remaining = newRemaining,
+                    TapState = TapApiService.GetTransitionState(newRemaining)
+                };
 
-  
+                context.TapsData.Add(newTap);
+                await context.SaveChangesAsync();
+            }
+
+            return newTap;
+        }
+
+
 
         public static TapState GetTransitionState(int remaining)
         {
@@ -147,6 +176,36 @@ namespace BeerTapsAPI.ApiServices
             using (var context = new BeerTapsApiDataModel())
             {
                 return context.TapsData.SingleOrDefaultAsOption(x => x.Id == id && x.OfficeID == officeId);
+            }
+        }
+
+
+        public async Task DeleteAsync(ResourceOrIdentifier<Tap, int> input, IRequestContext context,
+            CancellationToken cancellation)
+        {
+            using (var ctx = new BeerTapsApiDataModel())
+            {
+                Tap tap;
+                if (input.HasResource)
+                    tap = input.Resource;
+                else
+                {
+                    var officeID =
+                        context.UriParameters.GetByName<int>("OfficeID").EnsureValue(
+                            () =>
+                                context.CreateHttpResponseException<Tap>("Please supply office ID in the URI.",
+                                    System.Net.HttpStatusCode.BadRequest));
+                    tap =
+                        await
+                            ctx.TapsData.SingleOrDefaultAsync(x => x.Id == input.Id && x.OfficeID == officeID,
+                                cancellation);
+                    if (tap == null)
+                        context.CreateNotFoundHttpResponseException<Tap>();
+
+
+                }
+                ctx.TapsData.Remove(tap);
+                await ctx.SaveChangesAsync(cancellation);
             }
         }
     }

@@ -10,10 +10,7 @@ namespace BeerTapsAPI.WebApi.Hypermedia
 
         public static ResourceUriTemplate Uri = ResourceUriTemplate.Create("Offices({id})");
 
-        public override string EntrypointRelation
-        {
-            get { return LinkRelations.Office; }
-        }
+        public override string EntrypointRelation => LinkRelations.Office;
 
         public override IResourceStateSpec<Office, NullState, int> StateSpec
         {
@@ -25,15 +22,12 @@ namespace BeerTapsAPI.WebApi.Hypermedia
                         Links =
                         {
                             CreateLinkTemplate(LinkRelations.Tap, TapSpec.UriTapsAtOffice.Many, r => r.Id),
-                            CreateLinkTemplate(LinkRelations.UpdateKeg.Add, AddTapSpec.UriAdd, r => r.Id)
+                            CreateLinkTemplate(LinkRelations.UpdateKeg.Add, TapSpec.UriTapsAtOffice.Many, r => r.Id)
 
                         },
                         Operations = new StateSpecOperationsSource<Office, int>
                         {
                             Get = ServiceOperations.Get,
-                            InitialPost = ServiceOperations.Create,
-                            Post = ServiceOperations.Update,
-                            Delete = ServiceOperations.Delete,
                         },
                     };
             }
