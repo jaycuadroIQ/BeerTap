@@ -46,7 +46,7 @@ namespace BeerTapsAPI.WebApi.Hypermedia
                 Links =
                 {
                     
-                    CreateLinkTemplate(LinkRelations.Taps.Full, UriTapsAtOffice, c => c.OfficeID, c => c.Id),
+                    //CreateLinkTemplate(LinkRelations.Taps.Full, UriTapsAtOffice, c => c.OfficeID, c => c.Id),
                     CreateLinkTemplate(LinkRelations.UpdateKeg.Remove, UriTapsAtOffice, r => r.OfficeID, r => r.Id),
                     CreateLinkTemplate(LinkRelations.UpdateKeg.TakeBeer, UriTapsAtOffice, r => r.OfficeID, r => r.Id)
                 },
@@ -65,7 +65,7 @@ namespace BeerTapsAPI.WebApi.Hypermedia
             {
                 Links =
                 {
-                    CreateLinkTemplate(LinkRelations.Taps.HalfEmpty, UriTapsAtOffice, c => c.OfficeID, c => c.Id),
+                    //CreateLinkTemplate(LinkRelations.Taps.HalfEmpty, UriTapsAtOffice, c => c.OfficeID, c => c.Id),
                     CreateLinkTemplate(LinkRelations.UpdateKeg.Remove, UriTapsAtOffice, r => r.OfficeID, r => r.Id),
                     CreateLinkTemplate(LinkRelations.UpdateKeg.TakeBeer, UriTapsAtOffice, r => r.OfficeID, r => r.Id)
                 },
@@ -81,7 +81,7 @@ namespace BeerTapsAPI.WebApi.Hypermedia
             {
                 Links=
                 {
-                    CreateLinkTemplate(LinkRelations.Taps.AlmostEmpty, UriTapsAtOffice, c => c.OfficeID, c => c.Id),
+                    //CreateLinkTemplate(LinkRelations.Taps.AlmostEmpty, UriTapsAtOffice, c => c.OfficeID, c => c.Id),
                     CreateLinkTemplate(LinkRelations.UpdateKeg.Replace, ReplaceTapSpec.UriReplace, r => r.OfficeID, r => r.Id),
                     CreateLinkTemplate(LinkRelations.UpdateKeg.Remove, UriTapsAtOffice, r => r.OfficeID, r => r.Id),
                     CreateLinkTemplate(LinkRelations.UpdateKeg.TakeBeer, UriTapsAtOffice, r => r.OfficeID, r => r.Id)
@@ -99,7 +99,7 @@ namespace BeerTapsAPI.WebApi.Hypermedia
             {
                 Links =
                 {
-                    CreateLinkTemplate(LinkRelations.Taps.Empty, UriTapsAtOffice, c => c.OfficeID, c => c.Id),
+                    //CreateLinkTemplate(LinkRelations.Taps.Empty, UriTapsAtOffice, c => c.OfficeID, c => c.Id),
                     CreateLinkTemplate(LinkRelations.UpdateKeg.Replace, ReplaceTapSpec.UriReplace, r => r.OfficeID, r => r.Id),
                     CreateLinkTemplate(LinkRelations.UpdateKeg.Remove, UriTapsAtOffice, r => r.OfficeID, r => r.Id)
                 },

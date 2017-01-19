@@ -52,7 +52,7 @@ namespace BeerTapsAPI.ApiServices
                 }
             }
             else
-                context.CreateHttpResponseException<Tap>("Beer not found.", HttpStatusCode.NotFound);
+                throw context.CreateHttpResponseException<Tap>("Resource beer not found.", HttpStatusCode.NotFound);
 
 
 
@@ -63,7 +63,7 @@ namespace BeerTapsAPI.ApiServices
 
         private ReplaceTap UpdateTap(int id, int officeID, string newName, int replacementAmount)
         {
-            ReplaceTap replacementTap = new ReplaceTap();
+            ReplaceTap replacementTap = null;
             const int defaultTapContent = 5;
 
             using (var context = new BeerTapsApiDataModel())
@@ -81,6 +81,7 @@ namespace BeerTapsAPI.ApiServices
                     
                     context.SaveChanges();
 
+                    replacementTap = new ReplaceTap();
                     replacementTap.Name = tap.Name;
                     replacementTap.Id = tap.Id;
                     replacementTap.OfficeID = tap.OfficeID;
