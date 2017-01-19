@@ -43,7 +43,7 @@ namespace BeerTapsAPI.ApiServices
                 var tap =
                     await ctx.TapsData.SingleOrDefaultAsync(x => x.Id == id && x.OfficeID == officeID, cancellation);
                 if (tap == null)
-                    context.CreateNotFoundHttpResponseException<Tap>("Beer not found!");
+                    throw context.CreateNotFoundHttpResponseException<Tap>("Beer not found!");
                 return tap;
             }
         }
@@ -141,14 +141,6 @@ namespace BeerTapsAPI.ApiServices
 
         }
 
-        //private Tap GetTapById(int id, int officeID)
-        //{
-        //    using (var context = new BeerTapsApiDataModel())
-        //    {
-        //        return context.TapsData.SingleOrDefault(x => x.Id == id && x.OfficeID == officeID);
-        //    }
-        //}
-
         private Tap UpdateTap(int id, int officeId, int remaining)
         {
             Tap updatedTap = new Tap();
@@ -200,7 +192,7 @@ namespace BeerTapsAPI.ApiServices
                             ctx.TapsData.SingleOrDefaultAsync(x => x.Id == input.Id && x.OfficeID == officeID,
                                 cancellation);
                     if (tap == null)
-                        context.CreateNotFoundHttpResponseException<Tap>();
+                        context.CreateNotFoundHttpResponseException<Tap>("Beer not found!");
 
 
                 }

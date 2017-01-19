@@ -38,24 +38,29 @@ namespace BeerTapsAPI.ApiServices
             
             var tap = TapApiService.GetTapById(tapID, officeID);
 
+            if (resource.Remaining <= 0 || resource.Remaining > 5)
+                throw context.CreateHttpResponseException<Tap>(
+                    "Invalid amount of beer to take.", HttpStatusCode.BadRequest);
+
             if (tap.HasValue)
             {
-                if (tap.Value.Remaining == 0)
+                if (tap.Value.Remaining == 0 ||
+                        resource.Remaining > tap.Value.Remaining)
                 {
                     throw context.CreateHttpResponseException<Tap>("There is not enough beer remaining in the keg.",
                         HttpStatusCode.BadRequest);
                 }
             }
             else
-                context.CreateHttpResponseException<Tap>("Beer not found.", HttpStatusCode.NotFound);
+                throw context.CreateNotFoundHttpResponseException<Tap>("Beer not found!");
 
 
-            return Task.FromResult(UpdateTap(tap.Value.Id, tap.Value.OfficeID));
+            return Task.FromResult(UpdateTap(tap.Value.Id, tap.Value.OfficeID, resource.Remaining));
 
         }
 
 
-        private TakeBeer UpdateTap(int id, int officeID)
+        private TakeBeer UpdateTap(int id, int officeID, int amountToTake)
         {
             TakeBeer updatedTap = new TakeBeer();
             
@@ -65,7 +70,7 @@ namespace BeerTapsAPI.ApiServices
 
                 if (tap != null)
                 {
-                    tap.Remaining = tap.Remaining -= 1;
+                    tap.Remaining = amountToTake > 0 ? tap.Remaining - amountToTake : tap.Remaining -= 1;
                     tap.TapState = TapApiService.GetTransitionState(tap.Remaining);
                     
                     context.SaveChanges();
