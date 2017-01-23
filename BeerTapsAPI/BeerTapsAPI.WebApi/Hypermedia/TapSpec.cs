@@ -27,7 +27,7 @@ namespace BeerTapsAPI.WebApi.Hypermedia
                 Links =
                 {
 
-                    CreateLinkTemplate(LinkRelations.Taps.Full, UriTapsAtOffice, c => c.OfficeID, c => c.Id)
+                    CreateLinkTemplate(LinkRelations.Tap, UriTapsAtOffice, c => c.OfficeID, c => c.Id)
 
                 },
                 Operations = new StateSpecOperationsSource<Tap, int>()
@@ -47,8 +47,8 @@ namespace BeerTapsAPI.WebApi.Hypermedia
                 {
                     
                     //CreateLinkTemplate(LinkRelations.Taps.Full, UriTapsAtOffice, c => c.OfficeID, c => c.Id),
-                    CreateLinkTemplate(LinkRelations.UpdateKeg.Remove, UriTapsAtOffice, r => r.OfficeID, r => r.Id),
-                    CreateLinkTemplate(LinkRelations.UpdateKeg.TakeBeer, UriTapsAtOffice, r => r.OfficeID, r => r.Id)
+                    CreateLinkTemplate(LinkRelations.UpdateTap.Remove, UriTapsAtOffice, r => r.OfficeID, r => r.Id),
+                    CreateLinkTemplate(LinkRelations.UpdateTap.TakeBeer, UriTapsAtOffice, r => r.OfficeID, r => r.Id)
                 },
                 Operations = new StateSpecOperationsSource<Tap, int>()
                 {
@@ -66,8 +66,8 @@ namespace BeerTapsAPI.WebApi.Hypermedia
                 Links =
                 {
                     //CreateLinkTemplate(LinkRelations.Taps.HalfEmpty, UriTapsAtOffice, c => c.OfficeID, c => c.Id),
-                    CreateLinkTemplate(LinkRelations.UpdateKeg.Remove, UriTapsAtOffice, r => r.OfficeID, r => r.Id),
-                    CreateLinkTemplate(LinkRelations.UpdateKeg.TakeBeer, UriTapsAtOffice, r => r.OfficeID, r => r.Id)
+                    CreateLinkTemplate(LinkRelations.UpdateTap.Remove, UriTapsAtOffice, r => r.OfficeID, r => r.Id),
+                    CreateLinkTemplate(LinkRelations.UpdateTap.TakeBeer, UriTapsAtOffice, r => r.OfficeID, r => r.Id)
                 },
                 Operations = 
                 {
@@ -82,9 +82,9 @@ namespace BeerTapsAPI.WebApi.Hypermedia
                 Links=
                 {
                     //CreateLinkTemplate(LinkRelations.Taps.AlmostEmpty, UriTapsAtOffice, c => c.OfficeID, c => c.Id),
-                    CreateLinkTemplate(LinkRelations.UpdateKeg.Replace, ReplaceTapSpec.UriReplace, r => r.OfficeID, r => r.Id),
-                    CreateLinkTemplate(LinkRelations.UpdateKeg.Remove, UriTapsAtOffice, r => r.OfficeID, r => r.Id),
-                    CreateLinkTemplate(LinkRelations.UpdateKeg.TakeBeer, UriTapsAtOffice, r => r.OfficeID, r => r.Id)
+                    CreateLinkTemplate(LinkRelations.UpdateTap.Replace, ReplaceTapSpec.UriReplace, r => r.OfficeID, r => r.Id),
+                    CreateLinkTemplate(LinkRelations.UpdateTap.Remove, UriTapsAtOffice, r => r.OfficeID, r => r.Id),
+                    CreateLinkTemplate(LinkRelations.UpdateTap.TakeBeer, UriTapsAtOffice, r => r.OfficeID, r => r.Id)
                 },
                 Operations = 
                 {
@@ -100,8 +100,8 @@ namespace BeerTapsAPI.WebApi.Hypermedia
                 Links =
                 {
                     //CreateLinkTemplate(LinkRelations.Taps.Empty, UriTapsAtOffice, c => c.OfficeID, c => c.Id),
-                    CreateLinkTemplate(LinkRelations.UpdateKeg.Replace, ReplaceTapSpec.UriReplace, r => r.OfficeID, r => r.Id),
-                    CreateLinkTemplate(LinkRelations.UpdateKeg.Remove, UriTapsAtOffice, r => r.OfficeID, r => r.Id)
+                    CreateLinkTemplate(LinkRelations.UpdateTap.Replace, ReplaceTapSpec.UriReplace, r => r.OfficeID, r => r.Id),
+                    CreateLinkTemplate(LinkRelations.UpdateTap.Remove, UriTapsAtOffice, r => r.OfficeID, r => r.Id)
                 },
                 Operations = new StateSpecOperationsSource<Tap, int>()
                 {
