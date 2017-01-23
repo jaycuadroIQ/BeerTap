@@ -16,7 +16,7 @@ namespace BeerTapsAPI.Model
         /// <summary>
         /// Office ID
         /// </summary>
-        public int OfficeID { get; set; }
+        public int OfficeId { get; set; }
         /// <summary>
         /// remaining
         /// </summary>

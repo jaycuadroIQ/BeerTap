@@ -61,7 +61,7 @@ namespace BeerTapsAPI.ApiServices
                 office = context.OfficesData.SingleOrDefault(x => x.Id == id);
                 if (office != null)
                 {
-                    List<Tap> taps = context.TapsData.Where(x => x.OfficeID == id).ToList();
+                    List<Tap> taps = context.TapsData.Where(x => x.OfficeId == id).ToList();
                     office.Taps = taps;
                 }
             }

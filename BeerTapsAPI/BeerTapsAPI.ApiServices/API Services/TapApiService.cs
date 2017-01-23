@@ -41,7 +41,7 @@ namespace BeerTapsAPI.ApiServices
             using (var ctx = new BeerTapsApiDataModel())
             {
                 var tap =
-                    await ctx.TapsData.SingleOrDefaultAsync(x => x.Id == id && x.OfficeID == officeID, cancellation);
+                    await ctx.TapsData.SingleOrDefaultAsync(x => x.Id == id && x.OfficeId == officeID, cancellation);
                 if (tap == null)
                     throw context.CreateNotFoundHttpResponseException<Tap>("Tap resource cannot be found.");
                 return tap;
@@ -94,7 +94,7 @@ namespace BeerTapsAPI.ApiServices
                     () => context.CreateHttpResponseException<Tap>("Please supply tap ID in the URI.", System.Net.HttpStatusCode.BadRequest));
 
             var office = OfficeApiService.GetOfficeById(officeID);
-
+          
             if (office == null)
                 throw context.CreateNotFoundHttpResponseException<Office>("Office resource cannot be found.");
 
@@ -117,7 +117,7 @@ namespace BeerTapsAPI.ApiServices
                 throw context.CreateNotFoundHttpResponseException<Tap>();
 
 
-            return Task.FromResult(UpdateTap(tap.Value.Id, tap.Value.OfficeID, resource.Remaining));
+            return Task.FromResult(UpdateTap(tap.Value.Id, tap.Value.OfficeId, resource.Remaining));
 
         }
         private static async Task<Tap> CreateTap(int officeId, string tapName, int remaining)
@@ -128,7 +128,7 @@ namespace BeerTapsAPI.ApiServices
                 newTap = new Tap()
                 {
                     Name = tapName,
-                    OfficeID = officeId,
+                    OfficeId = officeId,
                     Remaining = remaining,
                     TapState = GetTransitionState(remaining)
                 };
@@ -163,7 +163,7 @@ namespace BeerTapsAPI.ApiServices
 
                     tap =
                         await
-                            ctx.TapsData.SingleOrDefaultAsync(x => x.Id == input.Id && x.OfficeID == officeId,
+                            ctx.TapsData.SingleOrDefaultAsync(x => x.Id == input.Id && x.OfficeId == officeId,
                                 cancellation);
                     if (tap == null)
                         context.CreateNotFoundHttpResponseException<Tap>();
@@ -197,7 +197,7 @@ namespace BeerTapsAPI.ApiServices
             Tap updatedTap = new Tap();
             using (var context = new BeerTapsApiDataModel())
             {
-                updatedTap = context.TapsData.SingleOrDefault(x => x.Id == id && x.OfficeID == officeId);
+                updatedTap = context.TapsData.SingleOrDefault(x => x.Id == id && x.OfficeId == officeId);
                 updatedTap.Remaining = updatedTap.Remaining - remaining;
                 updatedTap.TapState = GetTransitionState(updatedTap.Remaining);
                 
@@ -210,7 +210,7 @@ namespace BeerTapsAPI.ApiServices
         {
             using (var context = new BeerTapsApiDataModel())
             {
-                return context.TapsData.Where(x => x.OfficeID == officeID).ToList();
+                return context.TapsData.Where(x => x.OfficeId == officeID).ToList();
             }
         }
 
@@ -218,7 +218,7 @@ namespace BeerTapsAPI.ApiServices
         {
             using (var context = new BeerTapsApiDataModel())
             {
-                return context.TapsData.SingleOrDefaultAsOption(x => x.Id == id && x.OfficeID == officeId);
+                return context.TapsData.SingleOrDefaultAsOption(x => x.Id == id && x.OfficeId == officeId);
             }
         }
     }

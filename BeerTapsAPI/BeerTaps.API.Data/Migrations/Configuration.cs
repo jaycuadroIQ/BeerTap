@@ -9,7 +9,7 @@ namespace BeerTapsAPI.Data.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "BeerTapsAPI.Data.BeerTapsApiDataModel";
         }
 

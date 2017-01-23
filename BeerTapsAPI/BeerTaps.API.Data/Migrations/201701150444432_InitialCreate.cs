@@ -24,18 +24,18 @@ namespace BeerTapsAPI.Data.Migrations
                         Name = c.String(),
                         Remaining = c.Int(nullable: false),
                         TapState = c.Int(nullable: false),
-                        OfficeID = c.Int(nullable: false),
+                        OfficeId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Offices", t => t.OfficeID, cascadeDelete: true)
-                .Index(t => t.OfficeID);
+                .ForeignKey("dbo.Offices", t => t.OfficeId, cascadeDelete: true)
+                .Index(t => t.OfficeId);
             
         }
         
         public override void Down()
         {
             DropForeignKey("dbo.Taps", "OfficeID", "dbo.Offices");
-            DropIndex("dbo.Taps", new[] { "OfficeID" });
+            DropIndex("dbo.Taps", new[] { "OfficeId" });
             DropTable("dbo.Taps");
             DropTable("dbo.Offices");
         }

@@ -18,46 +18,40 @@ namespace BeerTapsAPI.WebApi.Hypermedia
             return new Dictionary<TapState, IEnumerable<TapState>>
             {
                 {
-                    TapState.Unknown, new []
-                    {
-                        TapState.Full,
-                        TapState.HalfEmpty,
-                        TapState.AlmostEmpty,
-                        TapState.HalfEmpty
-                    }
-                },
-                {
                     TapState.Full, new[]
                     {
                         TapState.HalfEmpty,
-                        TapState.Unknown,
+                        TapState.AlmostEmpty,
+                        TapState.Empty
                     }
                 },
                 {
                     TapState.HalfEmpty, new[]
                     {
                         TapState.AlmostEmpty,
-                        TapState.Unknown,
+                        TapState.Empty,
+                        TapState.Full
+                        
                     }
                 },
                 {
                     TapState.AlmostEmpty, new[]
                     {
                         TapState.Empty,
-                        TapState.Unknown,
+                        TapState.Full, 
+                        TapState.HalfEmpty
+                        
                     }
                 },
                 {
                     TapState.Empty, new[]
                     {
                         TapState.Full,
-                        TapState.Unknown
-                        
-
+                        TapState.AlmostEmpty,
+                        TapState.HalfEmpty
                     }
                 }
             };
-
         }
 
         public override IEnumerable<TapState> All

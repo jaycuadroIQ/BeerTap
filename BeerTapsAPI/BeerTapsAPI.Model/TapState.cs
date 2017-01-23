@@ -14,7 +14,7 @@ namespace BeerTapsAPI.Model
         /// <summary>
         /// Null, empty or unknown
         /// </summary>
-        Unknown,
+        //Unknown,
         /// <summary>
         /// Keg is full yay!
         /// </summary>

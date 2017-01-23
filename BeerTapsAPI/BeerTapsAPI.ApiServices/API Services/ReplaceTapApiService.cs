@@ -68,7 +68,7 @@ namespace BeerTapsAPI.ApiServices
 
             using (var context = new BeerTapsApiDataModel())
             {
-                var tap = context.TapsData.SingleOrDefault(x => x.Id == id && x.OfficeID == officeID);
+                var tap = context.TapsData.SingleOrDefault(x => x.Id == id && x.OfficeId == officeID);
 
                 if (tap != null)
                 {
@@ -84,7 +84,7 @@ namespace BeerTapsAPI.ApiServices
                     replacementTap = new ReplaceTap();
                     replacementTap.Name = tap.Name;
                     replacementTap.Id = tap.Id;
-                    replacementTap.OfficeID = tap.OfficeID;
+                    replacementTap.OfficeId = tap.OfficeId;
                     replacementTap.Remaining = tap.Remaining;
                 }
 
