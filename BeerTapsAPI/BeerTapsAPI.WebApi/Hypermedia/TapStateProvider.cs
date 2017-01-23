@@ -51,9 +51,8 @@ namespace BeerTapsAPI.WebApi.Hypermedia
                     TapState.Empty, new[]
                     {
                         TapState.Full,
-                        TapState.HalfEmpty,
-                        TapState.AlmostEmpty,
-                        TapState.HalfEmpty
+                        TapState.Unknown
+                        
 
                     }
                 }

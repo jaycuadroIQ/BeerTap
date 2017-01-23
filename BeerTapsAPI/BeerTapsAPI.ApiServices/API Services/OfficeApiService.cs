@@ -10,6 +10,7 @@ using IQ.Platform.Framework.WebApi;
 using BeerTapsAPI.Data;
 using Castle.Components.DictionaryAdapter;
 using Castle.Core.Internal;
+using IQ.Platform.Framework.Common;
 
 namespace BeerTapsAPI.ApiServices
 {
@@ -29,7 +30,12 @@ namespace BeerTapsAPI.ApiServices
 
         public Task<Office> GetAsync(int id, IRequestContext context, CancellationToken cancellation)
         {
-            return Task.FromResult(GetOfficeByID(id));
+            Office office = GetOfficeById(id);
+
+            if (office == null)
+                throw context.CreateNotFoundHttpResponseException<Office>("Office resource cannot be found.");
+
+            return Task.FromResult(office);
         }
 
         public Task<IEnumerable<Office>> GetManyAsync(IRequestContext context, CancellationToken cancellation)
@@ -37,10 +43,18 @@ namespace BeerTapsAPI.ApiServices
             
             return Task.FromResult(GetAll());
         }
-        
-        private Office GetOfficeByID(int id)
+
+        //public static Option<Office> GetOfficeById(int id)
+        //{
+        //    using (var context = new BeerTapsApiDataModel())
+        //    {
+        //        return context.OfficesData.SingleOrDefaultAsOption(x => x.Id == id);
+        //    }
+        //}
+
+        public static Office GetOfficeById(int id)
         {
-            Office office = new Office();
+            Office office;
 
             using (var context = new BeerTapsApiDataModel())
             {
@@ -61,7 +75,7 @@ namespace BeerTapsAPI.ApiServices
             {
                 foreach (Office office in context.OfficesData)
                 {
-                    updatedOfficeTapsReferenced.Add(GetOfficeByID(office.Id));   
+                    updatedOfficeTapsReferenced.Add(GetOfficeById(office.Id));  
                 }
 
             }

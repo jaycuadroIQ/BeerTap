@@ -52,27 +52,28 @@ namespace BeerTapsAPI.ApiServices
                 }
             }
             else
-                context.CreateHttpResponseException<Tap>("Beer not found.", HttpStatusCode.NotFound);
+                throw context.CreateHttpResponseException<Tap>("Resource beer not found.", HttpStatusCode.NotFound);
 
 
 
-            return Task.FromResult(UpdateTap(tapID, officeID, resource.Remaining, resource.Name));
+            return Task.FromResult(UpdateTap(tapID, officeID, resource.Name, resource.Remaining));
                 
         }
 
 
-        private ReplaceTap UpdateTap(int id, int officeID, int remaining, string newName)
+        private ReplaceTap UpdateTap(int id, int officeID, string newName, int replacementAmount)
         {
-            ReplaceTap replacementTap = new ReplaceTap();
-    
+            ReplaceTap replacementTap = null;
+            const int defaultTapContent = 5;
+
             using (var context = new BeerTapsApiDataModel())
             {
                 var tap = context.TapsData.SingleOrDefault(x => x.Id == id && x.OfficeID == officeID);
 
                 if (tap != null)
                 {
-                    tap.Remaining = remaining;
-                    tap.TapState = TapApiService.GetTransitionState(remaining);
+                    tap.Remaining = replacementAmount;
+                    tap.TapState = TapState.Full;
                     if (!string.IsNullOrEmpty(newName))
                     {
                         tap.Name = newName;
@@ -80,15 +81,13 @@ namespace BeerTapsAPI.ApiServices
                     
                     context.SaveChanges();
 
+                    replacementTap = new ReplaceTap();
                     replacementTap.Name = tap.Name;
                     replacementTap.Id = tap.Id;
                     replacementTap.OfficeID = tap.OfficeID;
                     replacementTap.Remaining = tap.Remaining;
                 }
-                else
-                {
-                    throw new Exception("Can't find the specific tap to replace.");
-                }
+
             }
             return replacementTap;
         }

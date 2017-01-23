@@ -181,10 +181,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API Services\AddTapApiService.cs" />
-    <Compile Include="API Services\IAddTapApiService.cs" />
-    <Compile Include="API Services\IRemoveTapApiService.cs" />
-    <Compile Include="API Services\RemoveTapApiService.cs" />
     <Compile Include="IDomainServiceResolver.cs" />
     <Compile Include="API Services\IOfficeApiService.cs" />
     <Compile Include="API Services\IReplaceTapApiService.cs" />
@@ -209,7 +205,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="Security\app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

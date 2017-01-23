@@ -54,16 +54,19 @@
             /// <summary>
             /// replace
             /// </summary>
-            public const string Replace = "iq.ReplaceKeg.Replace";
+            public const string Replace = "iq.UpdateKeg.Replace";
             /// <summary>
             /// Add
             /// </summary>
-            public const string Add = "iq.ReplaceKeg.Add";
+            public const string Add = "iq.UpdateKeg.Add";
             /// <summary>
             /// Remove
             /// </summary>
-            public const string Remove = "iq.ReplaceKeg.Remove";
-
+            public const string Remove = "iq.UpdateKeg.Remove";
+            /// <summary>
+            /// Take beer from keg
+            /// </summary>
+            public const string TakeBeer = "iq.UpdateKeg.TakeBeer";
         }
     }
 }
