@@ -23,7 +23,6 @@ namespace BeerTapsAPI.ApiServices
     {
 
         readonly IApiUserProvider<BeerTapsAPIApiUser> _userProvider;
-        List<Tap> Taps = new List<Tap>();
         public TapApiService(IApiUserProvider<BeerTapsAPIApiUser> userProvider)
         {
             if (userProvider == null)
@@ -35,13 +34,13 @@ namespace BeerTapsAPI.ApiServices
 
         public async Task<Tap> GetAsync(int id, IRequestContext context, CancellationToken cancellation)
         {
-            var officeID =
+            var officeId =
                 context.UriParameters.GetByName<int>("OfficeID").EnsureValue(
                     () => context.CreateHttpResponseException<Tap>("Please supply office ID in the URI.", System.Net.HttpStatusCode.BadRequest));
             using (var ctx = new BeerTapsApiDataModel())
             {
                 var tap =
-                    await ctx.TapsData.SingleOrDefaultAsync(x => x.Id == id && x.OfficeId == officeID, cancellation);
+                    await ctx.TapsData.SingleOrDefaultAsync(x => x.Id == id && x.OfficeId == officeId, cancellation);
                 if (tap == null)
                     throw context.CreateNotFoundHttpResponseException<Tap>("Tap resource cannot be found.");
                 return tap;
@@ -50,10 +49,10 @@ namespace BeerTapsAPI.ApiServices
 
         public Task<IEnumerable<Tap>> GetManyAsync(IRequestContext context, CancellationToken cancellation)
         {
-            var officeID = 
+            var officeId = 
                 context.UriParameters.GetByName<int>("OfficeID").EnsureValue(
                     () => context.CreateHttpResponseException<Tap>("Please supply office ID in the URI.", System.Net.HttpStatusCode.BadRequest));
-            return Task.FromResult(GetAll(officeID));
+            return Task.FromResult(GetAll(officeId));
 
 
         }
@@ -65,7 +64,7 @@ namespace BeerTapsAPI.ApiServices
                     () => context.CreateHttpResponseException<Tap>("Please supply office ID in the URI.", System.Net.HttpStatusCode.BadRequest));
 
             var office = OfficeApiService.GetOfficeById(officeId);
-
+          
             if (office == null)
                 throw context.CreateNotFoundHttpResponseException<Office>("Office resource cannot be found.");
 
@@ -86,19 +85,14 @@ namespace BeerTapsAPI.ApiServices
         public Task<Tap> UpdateAsync(Tap resource, IRequestContext context, CancellationToken cancellation)
         {
             
-            var officeID =
+            var officeId =
                 context.UriParameters.GetByName<int>("OfficeID").EnsureValue(
                     () => context.CreateHttpResponseException<Tap>("Please supply office ID in the URI.", System.Net.HttpStatusCode.BadRequest));
-            var tapID =
+            var tapId =
                 context.UriParameters.GetByName<int>("ID").EnsureValue(
                     () => context.CreateHttpResponseException<Tap>("Please supply tap ID in the URI.", System.Net.HttpStatusCode.BadRequest));
 
-            var office = OfficeApiService.GetOfficeById(officeID);
-          
-            if (office == null)
-                throw context.CreateNotFoundHttpResponseException<Office>("Office resource cannot be found.");
-
-            var tap = TapApiService.GetTapById(tapID, officeID);
+            var tap = TapApiService.GetTapById(tapId, officeId);
 
             if (resource.Remaining <= 0 || resource.Remaining > 5)
                 throw context.CreateHttpResponseException<Tap>(
@@ -114,7 +108,7 @@ namespace BeerTapsAPI.ApiServices
                 }
             }
             else
-                throw context.CreateNotFoundHttpResponseException<Tap>();
+                throw context.CreateNotFoundHttpResponseException<Tap>("Resource tap not found.");
 
 
             return Task.FromResult(UpdateTap(tap.Value.Id, tap.Value.OfficeId, resource.Remaining));

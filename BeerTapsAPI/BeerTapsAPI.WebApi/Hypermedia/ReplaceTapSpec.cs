@@ -28,9 +28,7 @@ namespace BeerTapsAPI.WebApi.Hypermedia
                         },
                         Operations = new StateSpecOperationsSource<ReplaceTap, int>()
                         {
-                            InitialPost = ServiceOperations.Create,
                             Post = ServiceOperations.Update
-                            
                         },
                     };
             }
