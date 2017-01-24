@@ -8,7 +8,7 @@ namespace BeerTapsAPI.WebApi.Hypermedia
 {
     public class ReplaceTapSpec : SingleStateResourceSpec<ReplaceTap, int>
     {
-        public static ResourceUriTemplate UriReplace = ResourceUriTemplate.Create("Offices({OfficeId})/Taps({id})/Replace");
+        public static ResourceUriTemplate UriReplace = ResourceUriTemplate.Create("Offices({officeId})/Taps({id})/Replace");
 
         protected override IEnumerable<ResourceLinkTemplate<ReplaceTap>> Links()
         {

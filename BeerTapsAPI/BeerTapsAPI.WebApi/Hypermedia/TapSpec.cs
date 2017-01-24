@@ -10,7 +10,7 @@ namespace BeerTapsAPI.WebApi.Hypermedia
     public class TapSpec : ResourceSpec<Tap, TapState, int>
     {
 
-        public static ResourceUriTemplate UriTapsAtOffice = ResourceUriTemplate.Create("Offices({OfficeId})/Taps({id})");
+        public static ResourceUriTemplate UriTapsAtOffice = ResourceUriTemplate.Create("Offices({officeId})/Taps({id})");
         public override string EntrypointRelation
         {
             get { return LinkRelations.Tap; }
@@ -22,25 +22,6 @@ namespace BeerTapsAPI.WebApi.Hypermedia
 
         protected override IEnumerable<IResourceStateSpec<Tap, TapState, int>> GetStateSpecs()
         {
-            //yield return new ResourceStateSpec<Tap, TapState, int>(TapState.Unknown)
-            //{
-            //    Links =
-            //    {
-
-            //        CreateLinkTemplate(LinkRelations.Tap, UriTapsAtOffice, c => c.OfficeId, c => c.Id)
-
-            //    },
-            //    Operations = new StateSpecOperationsSource<Tap, int>()
-            //    {
-            //        Get = ServiceOperations.Get,
-            //        InitialPost = ServiceOperations.Create,
-            //        Post = ServiceOperations.Update,
-            //        Delete = ServiceOperations.Delete
-
-
-            //    }
-            //};
-
             yield return new ResourceStateSpec<Tap, TapState, int>(TapState.Full)
             {
                 Links =

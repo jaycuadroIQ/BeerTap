@@ -35,7 +35,7 @@ namespace BeerTapsAPI.ApiServices
         public async Task<Tap> GetAsync(int id, IRequestContext context, CancellationToken cancellation)
         {
             var officeId =
-                context.UriParameters.GetByName<int>("OfficeID").EnsureValue(
+                context.UriParameters.GetByName<int>("officeId").EnsureValue(
                     () => context.CreateHttpResponseException<Tap>("Please supply office ID in the URI.", System.Net.HttpStatusCode.BadRequest));
             using (var ctx = new BeerTapsApiDataModel())
             {
@@ -50,7 +50,7 @@ namespace BeerTapsAPI.ApiServices
         public Task<IEnumerable<Tap>> GetManyAsync(IRequestContext context, CancellationToken cancellation)
         {
             var officeId = 
-                context.UriParameters.GetByName<int>("OfficeID").EnsureValue(
+                context.UriParameters.GetByName<int>("officeId").EnsureValue(
                     () => context.CreateHttpResponseException<Tap>("Please supply office ID in the URI.", System.Net.HttpStatusCode.BadRequest));
             return Task.FromResult(GetAll(officeId));
 
@@ -60,7 +60,7 @@ namespace BeerTapsAPI.ApiServices
         public async Task<ResourceCreationResult<Tap, int>> CreateAsync(Tap resource, IRequestContext context, CancellationToken cancellation)
         {
             var officeId =
-                context.UriParameters.GetByName<int>("OfficeID").EnsureValue(
+                context.UriParameters.GetByName<int>("officeId").EnsureValue(
                     () => context.CreateHttpResponseException<Tap>("Please supply office ID in the URI.", System.Net.HttpStatusCode.BadRequest));
 
             var office = OfficeApiService.GetOfficeById(officeId);
@@ -86,7 +86,7 @@ namespace BeerTapsAPI.ApiServices
         {
             
             var officeId =
-                context.UriParameters.GetByName<int>("OfficeID").EnsureValue(
+                context.UriParameters.GetByName<int>("officeId").EnsureValue(
                     () => context.CreateHttpResponseException<Tap>("Please supply office ID in the URI.", System.Net.HttpStatusCode.BadRequest));
             var tapId =
                 context.UriParameters.GetByName<int>("ID").EnsureValue(
@@ -106,13 +106,13 @@ namespace BeerTapsAPI.ApiServices
                     throw context.CreateHttpResponseException<Tap>("There is not enough beer remaining in the keg.",
                         HttpStatusCode.BadRequest);
                 }
+                var updatedTap = tap.Value;
+                updatedTap.Remaining = updatedTap.Remaining - resource.Remaining;
+
+                return Task.FromResult(UpdateTap(updatedTap));
             }
             else
                 throw context.CreateNotFoundHttpResponseException<Tap>("Resource tap not found.");
-
-
-            return Task.FromResult(UpdateTap(tap.Value.Id, tap.Value.OfficeId, resource.Remaining));
-
         }
         private static async Task<Tap> CreateTap(int officeId, string tapName, int remaining)
         {
@@ -145,14 +145,14 @@ namespace BeerTapsAPI.ApiServices
                 else
                 {
                     var officeId =
-                        context.UriParameters.GetByName<int>("OfficeID").EnsureValue(
+                        context.UriParameters.GetByName<int>("officeId").EnsureValue(
                             () =>
                                 context.CreateHttpResponseException<Tap>("Please supply office ID in the URI.",
                                     HttpStatusCode.BadRequest));
 
-                    var office = OfficeApiService.GetOfficeById(officeId);
+                    var officeExists = await ctx.OfficesData.AnyAsync(x => x.Id == officeId, cancellation);
 
-                    if (office == null)
+                    if (!officeExists)
                         throw context.CreateNotFoundHttpResponseException<Office>("Office resource cannot be found.");
 
                     tap =
@@ -195,6 +195,20 @@ namespace BeerTapsAPI.ApiServices
                 updatedTap.Remaining = updatedTap.Remaining - remaining;
                 updatedTap.TapState = GetTransitionState(updatedTap.Remaining);
                 
+                context.SaveChanges();
+            }
+            return updatedTap;
+        }
+
+        private Tap UpdateTap(Tap updatedTap)
+        {
+            using (var context = new BeerTapsApiDataModel())
+            {
+
+                var tap = context.TapsData.SingleOrDefault(x => x.Id == updatedTap.Id && x.OfficeId == updatedTap.OfficeId);
+                tap.Remaining = updatedTap.Remaining;
+                tap.TapState = GetTransitionState(tap.Remaining);
+
                 context.SaveChanges();
             }
             return updatedTap;
