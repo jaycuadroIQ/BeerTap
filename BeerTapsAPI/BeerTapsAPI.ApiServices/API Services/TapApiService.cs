@@ -108,6 +108,7 @@ namespace BeerTapsAPI.ApiServices
                 }
                 var updatedTap = tap.Value;
                 updatedTap.Remaining = updatedTap.Remaining - resource.Remaining;
+                updatedTap.TapState = GetTransitionState(updatedTap.Remaining);
 
                 return Task.FromResult(UpdateTap(updatedTap));
             }
@@ -207,8 +208,7 @@ namespace BeerTapsAPI.ApiServices
 
                 var tap = context.TapsData.SingleOrDefault(x => x.Id == updatedTap.Id && x.OfficeId == updatedTap.OfficeId);
                 tap.Remaining = updatedTap.Remaining;
-                tap.TapState = GetTransitionState(tap.Remaining);
-
+                tap.TapState = updatedTap.TapState;
                 context.SaveChanges();
             }
             return updatedTap;

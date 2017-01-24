@@ -5,7 +5,7 @@ using IQ.Platform.Framework.WebApi.Model.Hypermedia;
 namespace BeerTapsAPI.Model
 {
     /// <summary>
-    /// Replacing keg
+    /// Replacing tap
     /// </summary>
     public class ReplaceTap :  IUpdateTapResource
     {

@@ -56,7 +56,7 @@ namespace BeerTapsAPI.ApiServices
                 newTap.Id = tap.Value.Id;
                 newTap.OfficeId = tap.Value.OfficeId;
                 newTap.Remaining = resource.Remaining;
-                newTap.Name = !string.IsNullOrEmpty(resource.Name) ? resource.Name : newTap.Name;
+                newTap.Name = !string.IsNullOrEmpty(resource.Name) ? resource.Name : tap.Value.Name;
                 
                 newTap = UpdateTap(newTap);
 
@@ -80,10 +80,7 @@ namespace BeerTapsAPI.ApiServices
                 {
                     tap.Remaining = replacementTap.Remaining;
                     tap.TapState = TapApiService.GetTransitionState(tap.Remaining);
-                    if (!string.IsNullOrEmpty(replacementTap.Name))
-                    {
-                        tap.Name = replacementTap.Name;
-                    }
+                    tap.Name = replacementTap.Name;
                     context.SaveChanges();
                 }
 
