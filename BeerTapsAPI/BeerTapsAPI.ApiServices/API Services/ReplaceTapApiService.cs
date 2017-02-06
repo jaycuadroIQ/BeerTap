@@ -28,12 +28,12 @@ namespace BeerTapsAPI.ApiServices
 
         public Task<ReplaceTap> UpdateAsync(ReplaceTap resource, IRequestContext context, CancellationToken cancellation)
         {
-            var officeID =
-                context.UriParameters.GetByName<int>("OfficeID").EnsureValue(
-                    () => context.CreateHttpResponseException<Tap>("Please supply office ID in the URI.", System.Net.HttpStatusCode.BadRequest));
-            var tapID =
+            var officeId =
+                context.UriParameters.GetByName<int>("officeId").EnsureValue(
+                    () => context.CreateHttpResponseException<Tap>("Please supply office ID in the URI.", HttpStatusCode.BadRequest));
+            var tapId =
                 context.UriParameters.GetByName<int>("ID").EnsureValue(
-                    () => context.CreateHttpResponseException<Tap>("Please supply tap ID in the URI.", System.Net.HttpStatusCode.BadRequest));
+                    () => context.CreateHttpResponseException<Tap>("Please supply tap ID in the URI.", HttpStatusCode.BadRequest));
 
             if (resource.Remaining <= 0)
             {
@@ -41,7 +41,7 @@ namespace BeerTapsAPI.ApiServices
                         HttpStatusCode.BadRequest);
             }
 
-            var tap = TapApiService.GetTapById(tapID, officeID);
+            var tap = TapApiService.GetTapById(tapId, officeId);
 
             if (tap.HasValue)
             {
@@ -50,50 +50,60 @@ namespace BeerTapsAPI.ApiServices
                     throw context.CreateHttpResponseException<Tap>("The replacement keg should have more content than the existing one.",
                         HttpStatusCode.BadRequest);
                 }
+
+                var newTap = new ReplaceTap();
+
+                newTap.Id = tap.Value.Id;
+                newTap.OfficeId = tap.Value.OfficeId;
+                newTap.Remaining = resource.Remaining;
+                newTap.Name = !string.IsNullOrEmpty(resource.Name) ? resource.Name : tap.Value.Name;
+                
+                newTap = UpdateTap(newTap);
+
+                return Task.FromResult(UpdateTap(newTap));
+
             }
             else
-                context.CreateHttpResponseException<Tap>("Beer not found.", HttpStatusCode.NotFound);
-
-
-
-            return Task.FromResult(UpdateTap(tapID, officeID, resource.Remaining, resource.Name));
-                
+                throw context.CreateHttpResponseException<Tap>("Resource tap not found.", HttpStatusCode.NotFound);
+    
         }
 
 
-        private ReplaceTap UpdateTap(int id, int officeID, int remaining, string newName)
+        private ReplaceTap UpdateTap(ReplaceTap replacementTap)
         {
-            ReplaceTap replacementTap = new ReplaceTap();
-    
+            
             using (var context = new BeerTapsApiDataModel())
             {
-                var tap = context.TapsData.SingleOrDefault(x => x.Id == id && x.OfficeID == officeID);
+                var tap = context.TapsData.SingleOrDefault(x => x.Id == replacementTap.Id && x.OfficeId == replacementTap.OfficeId);
 
                 if (tap != null)
                 {
-                    tap.Remaining = remaining;
-                    tap.TapState = TapApiService.GetTransitionState(remaining);
-                    if (!string.IsNullOrEmpty(newName))
-                    {
-                        tap.Name = newName;
-                    }
-                    
+                    tap.Remaining = replacementTap.Remaining;
+                    tap.TapState = TapApiService.GetTransitionState(tap.Remaining);
+                    tap.Name = replacementTap.Name;
                     context.SaveChanges();
+                }
 
-                    replacementTap.Name = tap.Name;
-                    replacementTap.Id = tap.Id;
-                    replacementTap.OfficeID = tap.OfficeID;
-                    replacementTap.Remaining = tap.Remaining;
-                }
-                else
-                {
-                    throw new Exception("Can't find the specific tap to replace.");
-                }
             }
             return replacementTap;
         }
 
-        
+        private Tap UpdateTap(Tap tap)
+        {
+            using (var context = new BeerTapsApiDataModel())
+            {
+                var tapToUpdate = context.TapsData.SingleOrDefault(x => x.Id == tap.Id && x.OfficeId == tap.OfficeId);
+                if (tapToUpdate == null)
+                    return null;
+                
+                tapToUpdate.Name = tap.Name;
+                tapToUpdate.Remaining = tap.Remaining;
+                tapToUpdate.TapState = tap.TapState;
+                context.SaveChanges();
+
+                return tapToUpdate;
+            }
+        }
 
     }
 }

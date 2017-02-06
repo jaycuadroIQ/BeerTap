@@ -8,11 +8,11 @@ namespace BeerTapsAPI.WebApi.Hypermedia
 {
     public class ReplaceTapSpec : SingleStateResourceSpec<ReplaceTap, int>
     {
-        public static ResourceUriTemplate UriReplace = ResourceUriTemplate.Create("Offices({OfficeID})/Taps({id})/Replace");
+        public static ResourceUriTemplate UriReplace = ResourceUriTemplate.Create("Offices({officeId})/Taps({id})/Replace");
 
         protected override IEnumerable<ResourceLinkTemplate<ReplaceTap>> Links()
         {
-            yield return CreateLinkTemplate(CommonLinkRelations.Self, UriReplace, c => c.OfficeID, c => c.Id);
+            yield return CreateLinkTemplate(CommonLinkRelations.Self, UriReplace, c => c.OfficeId, c => c.Id);
         }
 
         public override IResourceStateSpec<ReplaceTap, NullState, int> StateSpec
@@ -24,13 +24,11 @@ namespace BeerTapsAPI.WebApi.Hypermedia
                     {
                         Links =
                         {
-                            CreateLinkTemplate(LinkRelations.Tap, TapSpec.UriTapsAtOffice, r => r.OfficeID, r => r.Id)
+                            CreateLinkTemplate(LinkRelations.Tap, TapSpec.UriTapsAtOffice, r => r.OfficeId, r => r.Id)
                         },
                         Operations = new StateSpecOperationsSource<ReplaceTap, int>()
                         {
-                            InitialPost = ServiceOperations.Create,
                             Post = ServiceOperations.Update
-                            
                         },
                     };
             }

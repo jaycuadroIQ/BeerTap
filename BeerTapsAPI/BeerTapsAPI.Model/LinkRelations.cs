@@ -13,57 +13,27 @@
         /// office name
         /// </summary>
         public const string Office = "iq:Office";
-
-        /// <summary>
-        /// For taps
-        /// </summary>
-        public static class Taps
-        {
-            /// <summary>
-            /// add
-            /// </summary>
-            public const string Full = "iq:Taps.Full";
-            /// <summary>
-            /// remove
-            /// </summary>
-            public const string HalfEmpty = "iq:Taps.HalfEmpty";
-            /// <summary>
-            /// For almost empty state
-            /// </summary>
-            public const string AlmostEmpty = "iq:Taps.AlmostEmpty";
-            /// <summary>
-            /// For empty state
-            /// </summary>
-            public const string Empty = "iq:Taps.Empty";
-            /// <summary>
-            /// remove
-            /// </summary>
-            public const string Remove = "iq:Taps.Remove";
-            /// <summary>
-            /// replace keg
-            /// </summary>
-            public const string Replace = "iq:Taps.Replace";
-
-
-        }
         /// <summary>
         /// Replacing Keg
         /// </summary>
-        public static class UpdateKeg
+        public static class UpdateTap
         {
             /// <summary>
             /// replace
             /// </summary>
-            public const string Replace = "iq.ReplaceKeg.Replace";
+            public const string Replace = "iq.UpdateTap.Replace";
             /// <summary>
             /// Add
             /// </summary>
-            public const string Add = "iq.ReplaceKeg.Add";
+            public const string Add = "iq.UpdateTap.Add";
             /// <summary>
             /// Remove
             /// </summary>
-            public const string Remove = "iq.ReplaceKeg.Remove";
-
+            public const string Remove = "iq.UpdateTap.Remove";
+            /// <summary>
+            /// Take beer from keg
+            /// </summary>
+            public const string TakeBeer = "iq.UpdateTap.TakeBeer";
         }
     }
 }

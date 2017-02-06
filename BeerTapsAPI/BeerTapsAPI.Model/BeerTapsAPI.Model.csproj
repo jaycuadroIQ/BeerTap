@@ -60,11 +60,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LinkRelations.cs" />
-    <Compile Include="Resources\AddTapResource.cs" />
     <Compile Include="Resources\IUpdateTapResource.cs" />
     <Compile Include="Resources\OfficeResource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\RemoveTapResource.cs" />
     <Compile Include="Resources\ReplaceTapResource.cs" />
     <Compile Include="Resources\TapResource.cs" />
     <Compile Include="TapState.cs" />

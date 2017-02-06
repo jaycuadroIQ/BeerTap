@@ -30,7 +30,7 @@ namespace BeerTapsAPI.Model
         /// <summary>
         /// Id where this particular tap belongs
         /// </summary>
-        public int OfficeID { get; set; }
+        public int OfficeId { get; set; }
         
     }
 }
